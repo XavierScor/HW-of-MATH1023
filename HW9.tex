@@ -1,0 +1,320 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{graphicx}
+\geometry{left=1.5cm}
+\author{GONG,Xianjin}
+\title{Homework 9 of Honor Calculus}
+
+\begin{document}
+\maketitle
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral1}}}(for peer review)
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2.4.3(2)}\\
+
+Let's set $f(x)=\log x$, then according to M.V.T.\\
+
+$\displaystyle\frac{f(x)-f(y)}{x-y}=f'(c)$ when $c\in(y,x)$\\
+
+besides, $f'(x)=\displaystyle\frac{1}{x}$ and $f^{(2)}(x)=-\displaystyle\frac{1}{x^2}<0$\\
+
+therefore, $f(x)$ is monotone decreasing, and $f'(y)>f'(x)>f'(x)$\\
+
+$\therefore$\qquad$f'(y)>\displaystyle\frac{f(x)-f(y)}{x-y}>f'(x)$\\
+
+$\therefore$\qquad$\displaystyle\frac{1}{y}>\frac{\log x-\log y}{x-y}>\frac{1}{x}\Rightarrow\frac{x-y}{y}>\log\frac{x}{y}>\frac{x-y}{x}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2.4.7(1)}\\
+
+Let's set $g(x)=\displaystyle e^{\frac{x}{2}}f(x)$\\
+
+$g'(x)=\displaystyle\frac{1}{2}e^{\frac{x}{2}}f(x)+f'(x)e^{\frac{x}{2}}$ besides, we know that $f'(x)=-2f(x)$\\
+
+$\therefore$\qquad$\displaystyle\frac{1}{2}e^{\frac{x}{2}}f(x)+f'(x)e^{\frac{x}{2}}=-f'(x)e^{\frac{x}{2}}+f'(x)e^{\frac{x}{2}}=0$\\
+
+$\therefore$\qquad$g(x)$ is a constant function, we set $g(x)=C$\\
+
+$\therefore$\qquad$\displaystyle e^{\frac{x}{2}}f(x)=C\Rightarrow f(x)=\displaystyle\frac{C}{e^{\frac{x}{2}}}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2.4.10(2)}\\
+
+We know that $(1-\cos x^2)'=2x\sin x^2$, and $(x^3\sin x)'=3x^2\sin x+x^3\cos x$\\
+
+by l'Hospital's rule\\
+
+$\lim \limits_{x \to 0}\displaystyle\frac{1-\cos x^2}{x^3\sin x}=\lim \limits_{x \to 0}\frac{2x\sin x^2}{3x^2\sin x+x^3\cos x}=\lim \limits_{x \to 0}\frac{2\sin x^2}{3x\sin x+x^2\cos x}=\frac{2\frac{\sin x^2}{x^2}}{3\frac{\sin x}{x}+\cos x}=\frac{2}{3+1}=\frac{1}{2}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2.5.4(2)}\\
+
+We know that $(\sin x^2-x^2)'=2x\cos x^2-2x$, $(x^6)'=6x^5$\\
+
+$\therefore$\qquad by l'Hospital's rule $\lim \limits_{x \to 0}\displaystyle\frac{\sin x^2-x^2}{x^6}=\lim \limits_{x \to 0}\frac{\cos x^2-1}{3x^4}$\\
+
+besides, $(\cos x^2-1)'=-2x\sin x^2$, $(3x^4)=12x^3$\\
+
+$\therefore$\qquad by l'Hospital's rule $\lim \limits_{x \to 0}\displaystyle\frac{\cos x^2-1}{3x^4}=-\frac{\sin x^2}{6x^2}=-\frac{1}{6}$\\
+
+this means that $\sin x^2$ is third order differentiable at $0$ with cubic approximation $x^2-\displaystyle\frac{1}{6}x^6$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2.5.11(6)}\\
+
+$\because$\qquad$\left[\log(ax+b)\right]'=\displaystyle\frac{a}{ax+b}, \left[\log(ax+b)\right]^{(2)}=-\displaystyle\frac{1}{(x+\frac{b}{a})^2}, \left[\log(ax+b)\right]^{(3)}=\frac{2}{(x+\frac{b}{a})^3}, \left[\log(ax+b)\right]^{(4)}=-\frac{2\cdot3}{(x+\frac{b}{a})^4}$\\
+
+$\therefore$\qquad$\left[\log(ax+b)\right]^{(n)}=\displaystyle\frac{(-1)^{n+1}(n-1)!}{(x+\frac{b}{a})^n}$\\
+
+$\therefore$\qquad$\left[\log\displaystyle\frac{ax+b}{cx+d}\right]^{(n)}=\left[\log(ax+b)-\log(cx+d)\right]^{(n)}=(-1)^{n+1}(n-1)!\left[\frac{1}{(x+\frac{b}{a})^n}-\frac{1}{(x+\frac{d}{c})^n}\right]$\\
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral2}}}(for TA)
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1}\\
+
+(a)\\
+
+Let's set $f(x)=\arctan x$, then $f'(x)=\cos^2(\arctan x)=\displaystyle\frac{1+\cos(2\arctan x)}{2}=\frac{1+\frac{1-x^2}{1+x^2}}{2}=\frac{1}{1+x^2}$\\
+
+$\therefore$\qquad according to M.V.T. $\displaystyle\frac{\arctan b-\arctan a}{b-a}=f'(c)$ when $b>c>a>0$\\
+
+$\because$\qquad $(\displaystyle\frac{1}{1+x^2})'=\frac{-2x}{(1+x^2)^2}$ which is less than $0$ when $x>0$\\
+
+$\therefore$\qquad$\displaystyle\frac{1}{1+a^2}>\frac{1}{1+c^2}>\frac{1}{1+b^2}$\\
+
+$\therefore$\qquad$\displaystyle\frac{1}{1+a^2}>\frac{\arctan b-\arctan a}{b-a}>\frac{1}{1+b^2}$\\
+
+$\therefore$\qquad$\displaystyle\frac{b-a}{1+b^2}<\arctan b-\arctan a<\frac{b-a}{1+a^2}$\\
+
+(b)\\
+
+Let's set that $M=\displaystyle\frac{f(a)-f(b)}{g(a)-g(b)}$, then we can know that $h(a)=h(b)$\\
+
+assume that $a>b$, according to M.V.T\\
+
+$\displaystyle\frac{h(a)-h(b)}{a-b}=0=h'(c)$ when $a>c>b$\\
+
+$\therefore$\qquad$f'(c)-\displaystyle\frac{f(a)-f(b)}{g(a)-g(b)}g'(c)=0$\\
+
+$\therefore$\qquad$\displaystyle\frac{f'(c)}{g'(c)}=\frac{f(a)-f(b)}{g(a)-g(b)}$\\
+
+(c)\\
+
+according to M.V.T.\\
+
+$\displaystyle\frac{k(1)-k(0)}{1-0}=k'(c)$ when $1>c>0$\\
+
+$\because$\qquad$k^{(2)}(x)<0$ on $(0,1)$, and $c>0$\\
+
+$\therefore$\qquad$k'(c)<k'(0)$ besides, $1>0\Rightarrow\displaystyle\frac{k(1)-k(0)}{1}>0$\\
+
+$\therefore$\qquad$k'(0)>0$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2}\\
+
+(a)\\
+
+$\because$\qquad$f(a_0)=f(a_1)=f(a_2)=\cdots=f(a_n)=0$\\
+
+$\therefore$\qquad according to M.V.T., we can get$\displaystyle\frac{f(a_0)-f(a_1)}{a_0-a_1}=f'(b_0)=0, \frac{f(a_1)-f(a_2)}{a_1-a_2}=f(b_1)=0,\cdots, \frac{f(a_{n-1})-f(a_n)}{a_{n-1}-a_n}=f'(b_{n-1})$ when $a_0<b_0<a_1, a_1<b_1<a_2, \cdots, a_{n-1}<b_{n-1}<a_n$\\
+
+$\therefore$\qquad again, according to M.V.T., we can get $\displaystyle\frac{f(b_0)-f(b_1)}{b_0-b_1}=f'(c_0)=0, \frac{f(b_1)-f(b_2)}{b_1-b_2}=f(c_1)=0,\cdots, \frac{f(b_{n-2})-f(b_{n-1})}{b_{n-2}-b_{n-1}}=f'(c_{n-2})$ when $b_0<c_0<b_1, b_1<c_1<b_2, \cdots, b_{n-2}<c_{n-2}<b_{n-1}$\\
+
+$\therefore$\qquad by m.i., $f^{(n)}(x_0)=\displaystyle\frac{f^{(n-1)}(y_0)-f^{(n-1)}(y_1)}{y_0-y_1}=0$\\
+
+(b)\\
+
+Prove by contradiction\\
+
+let's set $g=a_0+a_1x+a_2x^2+a_3x^3+\cdots+a_nx^n\neq0$\\
+
+then $g^(n)=a_nn!$ which is a constant function\\
+
+if $g(x)=0$ has $n+1$ distinct roots, according to (a), we know that there exists some number $x_0$ s.t. $g^{(n)}=0$\\
+
+then $a_n=0$\\
+
+then g is not a polynomial of degree at most n\\
+
+which is contradictory to our assumption\\
+
+$\therefore$\qquad $g(x)=0$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#3}\\
+
+If $f(x)$ is not a straight line, consider that $g(x)=f(a)+\displaystyle\frac{f(b)-f(a)}{b-a}(x-a)$\\
+
+and according to M.V.T., $\displaystyle\frac{f(b)-f(a)}{b-a}=f'(d)$ when $b>d>a$\\
+
+then there exists some $c$ which is between a and b s.t. $f(c)\neq g(c)$\\
+
+assume that $f(c)>g(c)$, then $\displaystyle\frac{f(b)-f(c)}{b-c}<\frac{f(b)-g(c)}{b-c}=f'(d)$\\
+
+again, according to M.V.T. there exists e which is between b and c s.t. $f'(e)=\displaystyle\frac{f(b)-f(c)}{b-c}<f'(d)=\frac{f(b)-f(a)}{b-a}$\\
+
+when $f(c)<g(c)$, then $\displaystyle\frac{f(b)-f(c)}{b-c}>\frac{f(b)-g(c)}{b-c}=f'(d)$\\
+
+again, according to M.V.T. there exists e which is between b and c s.t. $f'(e)=\displaystyle\frac{f(b)-f(c)}{b-c}>f'(d)=\frac{f(b)-f(a)}{b-a}$\\
+
+$\therefore$\qquad there exists $c_1, c_2$ in $(a,b)$ s.t. $f'(c_1)<\displaystyle\frac{f(b)-f(a)}{b-a}<f'(c_2)$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#4}\\
+
+(a)\\
+
+When $x$ goes to $0$, $x-\sin x$ and $x^3$ both goes to 0. So we may apply l'Hospital's rule twice.\\
+
+$\lim \limits_{x \to 0}\displaystyle\frac{x-\sin x}{x^3}=\lim \limits_{x \to 0}\frac{1-\cos x}{3x^2}=\lim \limits_{x \to 0}\frac{\sin x}{3\cdot2\cdot x}=\frac{1}{6}$\\
+
+(b)\\
+
+Since $\lim \limits_{x \to 0}1-\cos\displaystyle\frac{x}{2^n}=0$ and $\lim \limits_{x \to 0}x^2=0$. We may apply l'Hospital's rule.\\
+
+$\lim \limits_{x \to 0}\displaystyle\frac{1-\cos\frac{x}{2^n}}{x^2}=\lim \limits_{x \to 0}\frac{\frac{1}{2^n}\sin\frac{x}{2^n}}{2\cdot x}=\lim \limits_{x \to 0}\frac{1}{2^n\cdot2^n\cdot2}\frac{\sin\frac{x}{2^n}}{\frac{x}{2^n}}=\frac{1}{2^{2n+1}}$\\
+
+(c)\\
+
+$\because$\qquad$\lim \limits_{x \to 0}1-\sqrt[n]{\cos nx}=0$ and $\lim \limits_{x \to 0}x^2=0$\\
+
+$\therefore$\qquad After applying l'Hospital's rule, we can get:\\
+
+\qquad\quad$\lim \limits_{x \to 0}\displaystyle\frac{1-\sqrt[n]{\cos nx}}{x^2}=\frac{\sin nx\cdot[\cos x]^{\frac{1}{n}-1}}{2x}=\lim \limits_{x \to 0}\frac{\sin {nx}}{nx}\cdot n\cdot\frac{[\cos x]^{\frac{1}{n}-1}}{2}=\frac{n}{2}$\\
+
+(d)\\
+
+$\because$\qquad$\lim \limits_{n \to \infty}n^p=\infty$ and $\lim \limits_{x \to \infty}e^n=\infty$\\
+
+$\therefore$\qquad After applying l'Hospital's rule for n times, we can get:\\
+
+\qquad\quad$\lim \limits_{n \to \infty}\displaystyle\frac{n^P}{e^n}=\lim \limits_{n \to \infty}\frac{P\cdot n^{P-1}}{e^n}=\lim \limits_{n \to \infty}\frac{P\cdot(P-1)\cdot n^{P-2}}{e^n}=\cdots=\lim \limits_{n \to \infty}\frac{P!}{e^n}=0$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#5}\\
+
+(a)\\
+
+According to the question, we know that $R_n(x)=f(x)-\left(f(a)+f'(a)(x-a)+\displaystyle\frac{f^{(2)}(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n\right)$\\
+
+and $\lim \limits_{x \to a}R_n(x)=0$, $\lim \limits_{x \to a}(x-a)^n=0$\\
+
+We apply l'Hospital's rule, and we can get:\\
+
+$\lim \limits{x \to a}\frac{R_n(x)}{(x-a)^n}=\lim \limits_{x \to a}\displaystyle\frac{f'(x)-f'(a)-\frac{f^{(2)}(a)}{2!}2(x-a)-\frac{f^{(3)}(a)}{3!}3(x-a)^2-\cdots-\frac{f^{(n)}(a)}{n!}\cdot n(x-a)^{n-1}}{n\cdot(x-a)^{n-1}}$\\
+
+again we can know that $\lim \limits_{x \to a}\left(f'(x)-f'(a)-\frac{f^{(2)}(a)}{2!}2(x-a)-\frac{f^{(3)}(a)}{3!}3(x-a)^2-\cdots-\frac{f^{(n)}(a)}{n!}\cdot n(x-a)^{n-1}\right)=0$ and $\lim \limits_{x \to a}n\cdot(x-a)^{n-1}=0$\\
+
+By M.I., we apply l'Hospital's rule for more $n-2$ times, we can get:\\
+
+$\lim \limits_{x \to a}\displaystyle\frac{R_n{x}}{(x-a)^n}=\lim \limits_{x \to a}\frac{1}{n!}\left(\frac{f^{(n-1)}(x)-f^{(n-1)}(a)}{x-a}\right)-\frac{f^n(a)}{n!}=\frac{f^n(a)}{n!}-\frac{f^n{a}}{n!}=0$\\
+
+(b)\\
+
+According to (a) and the question, we know that:\\
+
+$f(x)=P_n+o\left((x-a)^n\right)\Rightarrow f(a)+f'(a)(x-a)+\displaystyle\frac{f^{(2)}(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n+o\left((x-a)^n\right)=c_0+c_1(x-a)+c_2(x-a)^2+\cdots+c_n(x-a)^n+\left((x-a)^n\right)$\\
+
+first we know that $\lim \limits_{x \to a}\displaystyle\frac{o\left((x-a)^n\right)}{(x-a)^n}=0$, therefore $\lim \limits_{x \to a}\displaystyle\frac{o\left((x-a)^n\right)}{(x-a)^k}=\lim \limits_{x \to a}\frac{o\left((x-a)^n\right)}{(x-a)^n}\cdot(x-a)^{n-k}=0, \forall k\in Z and k\in [0,n]$\\
+
+after we take the limit of the both side of the equation, we can get:\\
+
+$\lim \limits_{x \to a}\left(f(a)+f'(a)(x-a)+\displaystyle\frac{f^{(2)}(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n+o\left((x-a)^n\right)\right)=f(a)=\lim \limits_{x \to a}\left(c_0+c_1(x-a)+c_2(x-a)^2+\cdots+c_n(x-a)^n+\left((x-a)^n\right)\right)=c_0$\\
+
+therefore, $f'(a)(x-a)+\displaystyle\frac{f^{(2)}(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n+o\left((x-a)^n\right)=c_1(x-a)+c_2(x-a)^2+\cdots+c_n(x-a)^n+\left((x-a)^n\right)$\\
+
+and $f'(a)+\displaystyle\frac{f^{(2)}(a)}{2!}(x-a)+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^{n-1}+\frac{o\left((x-a)^n\right)}{(x-a)}=c_1+c_2(x-a)+\cdots+c_n(x-a)^{n-1}+\frac{\left((x-a)^n\right)}{(x-a)}$\\
+
+by M.I. and after we take limit of the both side for more $n-1$ times, we can get:\\
+
+$f'(a)=c_1, f^{(2)}(a)=c_2, f^{(3)}(a)=c_3, \cdots, f^{(n)}(a)=c_n$\\
+
+$\therefore$\qquad$P_n(x)=T_n(x)$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#6}\\
+
+(a)\\
+
+Apply polynomial approximation, we can get:\\
+
+$f(x)=f(a)+f'(a)(x-a)+f^{(2)}(a)(x-a)^2+o\left((x-a)^2\right)$ and $g(y)=g(f(a))+g'(f(a))\cdot(y-f(a))+g^{(2)}(f(a))\cdot(y-f(a))^2+o\left((y-f(a))^2\right)$\\
+
+then we let $y=f(x)$, we can get:\\
+
+$g(f(x))=g(f(a))+g'(f(a))(f'(a)(x-a)+f^{(2)}(a)(x-a)^2+o\left((x-a)^2\right))+g^{(2)}(f(a))(f'(a)(x-a)+f^{(2)}(a)(x-a)^2+o\left((x-a)^2\right))^2+o\left((f'(a)(x-a)+f^{(2)}(a)(x-a)^2+o\left((x-a)^2\right))^2\right)$\\
+
+\qquad\quad$=g(f(a))+g'(f(a))f'(a)(x-a)+g'(f(a))f^{(2)}(a)(x-a)^2+g^{(2)}(f(a))f'(a)^2(x-a)^2+2g^{(2)}(f(a))f'(a)f^{(2)}(a)(x-a)^3+g^{(2)}(f(a))f^{(2)}(a)^2(x-a)^4$\\
+
+\qquad\quad$=g(f(a))+g'(f(a))f'(a)(x-a)+\left(g'(f(a))f^{(2)}(a)+g^{(2)}(f(a))f'(a)^2\right)(x-a)^2+o\left((x-a)^2\right)$\\
+
+Besides, $g(f(x))=g(f(a))+\left[g(f)\right]'(a)(x-a)+\left[g(f)\right]^{(2)}(a)(x-a)^2+o\left((x-a)^2\right)$\\
+
+$\therefore$\qquad$g(f(x))^{(2)}(a)=g'(f(a))f^{(2)}(a)+g^{(2)}(f(a))f'(a)^2$\\
+
+(b)\\
+
+We know that: $\displaystyle f(x)=f(a)+f'(a)(x-a)+\frac{f^{(2)}}{2!}(x-a)^2+\frac{f^{(3)}(a)}{3!}(x-a)^3+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n+o\left((x-a)^n\right)$\\
+
+$\displaystyle g(x)=g(a)+g'(a)(x-a)+\frac{g^{(2)}}{2!}(x-a)^2+\frac{g^{(3)}(a)}{3!}(x-a)^3+\cdots+\frac{g^{(n)}(a)}{n!}(x-a)^n+o\left((x-a)^n\right)$\\
+
+$\therefore$\qquad$\displaystyle f(x)\cdot g(x)=f(a)\cdot g(a)+\left[f(a)\cdot g'(a)+g(a)\cdot f'(a)\right](x-a)+\left[f(a)\frac{g^{(2)}(a)}{2!}+f'(a)g'(a)+\frac{f^{(2)}(a)}{2!}g(a)\right](x-a)^2+\cdots+\left[f(a)\frac{g^{(n)}(a)}{n!}+f'(a)\frac{g^{(n-1)}(a)}{(n-1)!}+\frac{f^{(2)}(a)}{2!}\frac{g^{(n-2)}(a)}{(n-2)!}+\cdots+\frac{f^{(n)}(a)}{n!}g(a)\right](x-a)^n+o\left((x-a)^n\right)$\\
+
+meanwhile, $\displaystyle f(x)\cdot g(x)=(fg)(a)+(fg)'(a)(x-a)+\frac{(fg)^{(2)}(a)}{2!}(x-a)^2+\cdots+\frac{(fg)^{(n)}(x-a)^n}{n!}(x-a)^n+o\left((x-a)^n\right)$\\
+
+$\therefore$\qquad$(fg)^{(n)}=n!\left[f(a)\frac{g^{(n)}(a)}{n!}+f'(a)\frac{g^{(n-1)}(a)}{(n-1)!}+\frac{f^{(2)}(a)}{2!}\frac{g^{(n-2)}(a)}{(n-2)!}+\cdots+\frac{f^{(n)}(a)}{n!}g(a)\right]=\sum \limits_{k=0}^{n}C^n_kf^{(n-k)}(a)g^{(k)}(a)$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#7}\\
+
+(a)\\
+
+for $\sin x$, $(\sin x)'=\cos x, (\sin x)^{(2)}=-\sin x, (\sin x)^{(3)}=-\cos x$\\
+
+and $sin(0)=0, cos(0)=1$, therefore $\sin x=0+1\cdot\displaystyle\frac{x}{1!}+0-1\cdot\frac{x^3}{3!}+o(x^3)=x-\frac{x^3}{6}+o(x^3)$\\
+
+for $\arctan x$\\
+
+$\because$\qquad$\tan(\arctan x)=x$\\
+
+$\therefore$\qquad$[\tan(\arctan x)]'=\tan'(\arctan x)\cdot(\arctan x)'=1\Rightarrow(\arctan x)'=\cos^2(\arctan x)$\\
+
+$\therefore$\qquad$(\arctan x)^{(2)}=[\cos^2(\arctan x)]'(\arctan x)'=-2\sin(\arctan x)\cos^3(\arctan x)$\\
+
+$\therefore$\qquad$(\arctan x)^{(3)}=-2\cos^6(\arctan x) +6\sin^2(\arctan x)\cos^4(\arctan x)$\\
+
+$\therefore$\qquad$\displaystyle\arctan x=0+1\cdot\frac{x}{1!}+0-2\frac{x^3}{3\cdot2\cdot1}+o(x^3)=x-\frac{x^3}{3}+o(x^3)$\\
+
+(b)\\
+
+Using polynomial approximation, we can get:\\
+
+$\displaystyle\sin x=x-\frac{x^3}{6}+\frac{x^5}{5!}+o(x^5)$ and $\displaystyle\arctan x=x-\frac{x^3}{3}+16\frac{x^5}{5!}+o(x^5)$\\
+
+$\therefore$\qquad$\displaystyle|\sin a_n-\arctan a_n|=|\frac{a_n^3}{6}-\frac{a_n^5}{8}+o(a_n^5)|$\\
+
+we set $\epsilon_1=\displaystyle\frac{1}{16}$\\
+
+$\because$\qquad$\lim \limits_{x \to 0}\displaystyle\frac{o(x^5)}{x^5}=0, \lim \limits_{n \to \infty}a_n=0$\\
+
+$\therefore$\qquad$\exists\delta$ s.t. $\displaystyle x<\delta\Rightarrow\left|\frac{o(x^5)}{x^5}\right|<\epsilon_1$\\
+
+\qquad\quad and $\exists N$ s.t. $n>N\Rightarrow a_n<\min{\delta,\displaystyle\frac{2}{\sqrt{3}}},$\\
+
+$\therefore$\qquad$n>N\Rightarrow 0<a_n<\min{\delta,\displaystyle\frac{2}{\sqrt{3}}}\Rightarrow\left|\frac{o(x^5)}{x^5}\right|<\epsilon_1\Rightarrow |o(a_n^5)|<\left|\displaystyle\frac{a_n^5}{16}\right|$\\
+
+$\qquad\quad\Rightarrow\displaystyle|\sin a_n-\arctan a_n|=|\frac{a_n^3}{6}-\frac{a_n^5}{8}+o(a_n^5)|<|\frac{a_n^3}{6}-\frac{a_n^5}{8}|+|o(a_n^5)|<|\frac{a_n^3}{6}-\frac{a_n^5}{8}|+\left|\displaystyle\frac{a_n^5}{16}\right|<\displaystyle\frac{x^3}{6}-\frac{x^5}{16}<\displaystyle\frac{x^3}{6}$\\
+
+(c)\\
+
+According to (b), we can get:\\
+
+$\forall\epsilon>0, \exists N=\sqrt{\displaystyle\frac{1}{6\epsilon}}$, s.t.\\
+
+$m=2n, n>N\Rightarrow\left|\sum \limits_{k=1}^m\left|\sin \displaystyle\frac{1}{k}-\arctan \frac{1}{k}\right|-\sum \limits_{k=1}^n\left|\sin \displaystyle\frac{1}{k}-\arctan \frac{1}{k}\right|\right|=\sum \limits_{k=n}^m\left|\sin \displaystyle\frac{1}{k}-\arctan \frac{1}{k}\right|<\sum \limits_{k=n}^m\frac{1}{6k^3}<\sum \limits_{k=n}^m\frac{1}{6n^3}=\frac{1}{6n^2}<\epsilon$\\
+
+$\therefore$\qquad$\sum \limits_{k=1}^n\left|\sin \displaystyle\frac{1}{k}-\arctan \frac{1}{k}\right|$ is a cauchy sequence.\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}\sum \limits_{k=1}^n\left|\sin \displaystyle\frac{1}{k}-\arctan \frac{1}{k}\right|$ converges\\
+
+\end{document}

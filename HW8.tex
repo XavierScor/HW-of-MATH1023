@@ -1,0 +1,346 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{graphicx}
+\geometry{left=1.5cm}
+\author{GONG,Xianjin}
+\title{Homework 8 of Honor Calculus}
+
+\begin{document}
+\maketitle
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral1}}}(for peer review)
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2.2.32(3)}\\
+
+Differentiate the both side of the equation. We can get:\\
+
+$\displaystyle\frac{d(\frac{x^2}{a^2}+\frac{y^2}{b^2})}{dx}=0$\\
+
+$\therefore$\qquad$\displaystyle\frac{2}{a^2}x+\frac{2}{b^2}y\cdot y'=0$\\
+
+$\therefore$\qquad$y'=-\frac{b^2x}{a^2y}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2.2.42}\\
+
+If we set $g(x)=f^{-1}(x)$, then $f(g(x))=x$\\
+
+$\therefore$\qquad$\displaystyle\frac{df(g(x))}{dx}=1$\\
+
+$\therefore$\qquad$f'(g(x))\cdot g'(x)=1$\\
+
+$\therefore$\qquad$g'(x)=\displaystyle\frac{1}{f'(g(x))}$\\
+
+according to the question, we can get: $f(1)=1$, so $f^{-1}(1)=1$\\
+
+and because $f'(1)=a$, so $(f^{-1}(1))'=\displaystyle\frac{1}{a}$\\
+
+$\therefore$\qquad$\displaystyle\frac{df\left(\frac{1}{f^{-1}\left(\frac{x}{f(x)}\right)}\right)}{dx}=f'\left(\frac{1}{f^{-1}\left(\frac{x}{f(x)}\right)}\right)\cdot\left(-\frac{1}{\left(f^{-1}\left(\frac{x}{f(x)}\right)\right)^2}\right)\cdot \left(f^{-1}\left(\frac{x}{f(x)}\right)\right)'\cdot\frac{f(x)-f'(x)x}{f^2(x)}$\\
+
+\qquad\qquad\qquad\qquad\qquad$=a\cdot(-1)\cdot\displaystyle\frac{1}{a}\cdot\frac{1-a}{1}=a-1$ when $x=1$\\
+
+also, $\left(f^{-1}(f^{-1}(x))\right)'=\displaystyle\frac{1}{a^2}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2.3.8(5)}\\
+
+$\because$\qquad$\tan'x=\left(\displaystyle\frac{\sin x}{\cos x}\right)'=\frac{\cos^2x+\sin^2x}{\cos^2x}=\frac{1}{\cos^2x}$\\
+
+$\therefore$\qquad$(\tan x+\cot x)'=\tan'x-\frac{1}{\tan^2x}\cdot\tan'x=\displaystyle\frac{1}{\cos^2x}-\frac{1}{\sin^2x}=\frac{2\sin^2x-1}{\sin^2x\cos^2x}$\\
+
+when $x\in\left[\displaystyle-\frac{\pi}{4},0\right)\cup\left(0,\frac{\pi}{4}\right]$, $\sin^2x<\displaystyle\frac{1}{2}$\\
+
+$\therefore$\qquad$\displaystyle\frac{2\sin^2x-1}{\sin^2x\cos^2x}<0$\\
+
+$\therefore$\qquad the local maximum is $\displaystyle f(-\frac{\pi}{4})=-2$, the local minimum is $\displaystyle f(\frac{\pi}{4})=2$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2.3.10(4)}\\
+
+$(x^2e^x)'=(2x+x^2)e^x$\\
+
+$\therefore$\qquad we let $(2x+x^2)e^x>0$, and we can solve for x. $x\in(-\infty,-2)\cup(0,+\infty)$\\
+
+meanwhile we let $(2x+x^2)e^x<0$, and we can solve for x. $x\in(-2,0)$\\
+
+so we can get:\\
+
+\begin{tabular}{|l|l|l|l|l|l|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $x$ & $(-\infty,-2)$ & $-2$ & $(-2,0)$ & $0$ & $(0,+\infty)$\\ \hline
+  $f$ & $\nearrow$ & $max$ & $\searrow$ & $min$ & $\nearrow$\\ \hline
+  $f'$ & $+$ & $0$ & $-$ & $0$ & $+$\\
+  \hline
+\end{tabular}\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2.3.10(10)}\\
+
+$(x^3+3\log x)'=3x^2+\displaystyle\frac{3}{x}>0$ when $x\in(0,+\infty)$\\
+
+$\therefore$\qquad the function is monotone increasing and has no extrema.\\
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral2}}}(for TA)
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1}\\
+
+According to the question, we can  get: $f(2)=-16$\\
+
+and $f'(x)=\begin{cases}
+3x^2-12 & \text{x$>$2}\\
+\displaystyle\frac{1}{e^2}+\frac{1-x}{e^x}& \text{x$<$2}
+\end{cases}$\\
+
+\quad\\
+
+$\therefore$\qquad$\lim \limits_{x \to 2^-}f'(x)=\lim \limits_{x \to 2^-}\left(\frac{1}{e^2}+\frac{1-x}{e^x}\right)=0$=$\lim \limits_{x \to 2^+}f'(x)=\lim \limits_{x \to 2^+}\left(3x^2-12\right)=0$\\
+
+but $\displaystyle\lim \limits_{x \to 2^-}f(x)=\lim \limits_{x \to 2^-}\left(\displaystyle\frac{x}{e^2}+\frac{x}{e^x}\right)=\frac{4}{e^2}\neq\lim \limits_{x \to 2^+}f(x)=\lim \limits_{x \to 2^+}(x^3-12x)=-16$\\
+
+$\therefore$\qquad it is not continuous at 2 and it can not be differentiated at 2. $f'(2)$ doesn't exists.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2}\\
+
+(a)\\
+
+Prove by m.i.\\
+
+$(f\cdot g)'=f'g+fg'$\\
+
+assume that $(f\cdot g)^{(n)}=\sum \limits^n_{k=0}C^n_kf^{(k)}g^{(n-k)}$\\
+
+then $(f\cdot g)^{n+1}=\sum \limits^n_{k=0}(f^{(k+1)}g^{(n-k)}+f^{(k)}g^{(n-k+1)})$\\
+
+\qquad\qquad\qquad\quad$=f\cdot g^{(n+1)}+f^{(1)}g^{(n)}+\sum \limits^{n-1}_{k=1}C^n_k\left(f^{(k+1)}g^{(n-k)}+f^{(k)}g^{(n-k+1)}\right)+f^{(n)}g^{(1)}+f^{(n+1)}g$\qquad\qquad\qquad$(\star)$\\
+
+$\because$\qquad $C^n_k+C^n_{k+1}=\displaystyle\frac{n!}{k!(n-k)!}+\frac{n!}{(k+1)!(n-k-1)!}=\frac{n!}{k!(n-k)!}\left(1+\frac{n-k}{k+1}\right)=\frac{(n+1)!}{(k+1)!(n-k)!}=C^{n+1}_{k+1}$\\
+
+$\therefore$\qquad$\star=fg^{(n+1)}+\sum \limits^{n}_{k=1}C^{n+1}_kf^{(k)}g^{(n+1-k)}+f^{(n+1)}g=\sum \limits^{n+1}_{k=0}f^{(k)}g^{(n+1-k)}$\\
+
+$\therefore$\qquad$(f\cdot g)^{(n)}=\sum \limits^n_{k=0}C^n_kf^{(k)}g^{(n-k)}$\\
+
+(b)i.\\
+
+$P_n(x)=\displaystyle\frac{1}{2^nn!}\frac{d^n}{dx^n}(x+1)^n(x-1)^n=\frac{1}{2^nn!}\sum \limits^n_{k=0}C^n_k\frac{n!}{(n-k)!}(x+1)^{n-k}\frac{n!}{k!}(x-1)^k=\frac{1}{2^n}\sum \limits^n_{k=0}(C^n_k)^2(x+1)^{n-k}(x-1)^k$\\
+
+and we know that, the degree of $(x+1)^{n-k}(x-1)^k$ is n.\\
+
+so for $P_n(x)$, the degree is n.\\
+
+ii.\\
+
+From i. $P_n(x)=\displaystyle\frac{1}{2^n}\left[(x+1)^n+n^2(x+1)^{n-1}(x-1)+\cdots+(x-1)^n\right]$\\
+
+$\therefore$\qquad$P_n(1)=\displaystyle\frac{1}{2^n}[2^n+2^{n-1}\cdot0+\cdots+0]=1$\\
+
+iii.\\
+
+Set $f(x)=(x^2-1)^n$, then $f'(x)=n(x^2-1)^{n-1}\cdot2x=\displaystyle\frac{nf(x)}{x^2-1}\cdot2x$\\
+
+$\therefore$\qquad$(1-x^2)f'(x)+2nxf(x)=0$\\
+
+after differentiate its both side for $n+1$ times, we can get:\\
+
+$(1-x^2)f^{(n+2)}(x)+(n+1)(-2x)f^{(n+1)}(x)+\displaystyle\frac{n(n+1)}{2}(-2)f^{(n)}(x)+2xnf^{(n+1)}(x)+n(n+1)\cdot2f^{(n)}(x)=0$\\
+
+$\therefore$\qquad$(1-x^2)f^{(n+2)}(x)-2xf^{(n+1)}(x)+n(n+1)f^{(n)}(x)=0$\\
+
+$\therefore$\qquad$\displaystyle(1-x^2)\frac{f^{(n+2)}(x)}{2^nn!}-2x\frac{f^{(n+1)}(x)}{2^nn!}+n(n+1)\frac{f^{(n)}(x)}{2^nn!}=(1-x^2)P_n^{(2)}(x)-2xP_n'(x)+n(n+1)P_n(x)=0$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#3}\\
+
+(a)\\
+
+differentiate the both side of the equation: $y^2=4ax$, we can get:\\
+
+$2y\cdot y'=4a$\\
+
+$\therefore$\qquad$y'=\displaystyle\frac{2a}{y}$\\
+
+so the function of the normal line which passes through $(at_i^2,2at_i)$ is: $y-2at_i=-t_i(x-at_i^2)$\\
+
+so we can get: $-t_1x+at_1^3+2at_1=-t_2x+at_2^3+2at_2$ and $-t_1x+at_1^3+2at_1=-t_3x+at_3^3+2at_3$\\
+
+besides, the roots of equations above should be equal\\
+
+$\therefore$\qquad$t_2^2+t_2t_1+t_1^2=t_3^2+t_2t_3+t_2^2$\\
+
+$\because$\qquad$t_1\neq t_2\neq t_3$\\
+
+$\therefore$\qquad$t_2=-(t_1+t_3)$ i.e. $t_1+t_2+t_3=0$\\
+
+(b)\\
+
+according to (a), we can know that the function of the normal line passing through $Q_n(x_n,\sqrt{4ax_n})$ is $y=\displaystyle-\frac{\sqrt{x_n}}{\sqrt{a}}(x-x_n)+\sqrt{4ax_n}$\\
+
+then we can get simultaneous formulas: $\displaystyle\frac{x_n}{a}(x-x_n)^2-4x_n(x-x_n)+4ax_n=4ax$\\
+
+$\therefore$\qquad$\displaystyle\frac{x_n}{a}x^2-\frac{2x_n}{a}x+\frac{x_n^3}{a}-4x_nx+4x_n^2+4ax_n=4ax$\\
+
+$\therefore$\qquad$\displaystyle\frac{x_n}{a}x^2-(4x_n+\frac{2x_n}{a}+4a)x+\frac{x_n^3}{a}+4x_n^2+4ax_n=0$\\
+
+according to Vieta theorem, $x_n\cdot x_{n+1}=x_n^2+4x_na+4a^2$\\
+
+$\therefore$\qquad$\displaystyle x_{n+1}=x_n+4a+\frac{4a^2}{x_n}$\\
+
+$\therefore$\qquad$x_{n+1}-x_n=4a+\displaystyle\frac{4a^2}{x_n}>4a>0$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}(x_{n+1}-x_n)>0$\\
+
+$\therefore$\qquad$x_n-x_1>(n-1)a$\\
+
+$\therefore$\qquad$\forall B>0, \exists N=\displaystyle\frac{B-x_1}{a}+1$ s.t. $n>N \Rightarrow x_n>(n-1)a+x_1>B$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}x_n=+\infty$\\
+
+and we know that $|y_n|=\sqrt{4ax_n}$, plug $x_{n+1}=x_n+4a+\frac{4a^2}{x_n}$ in $|y_{n+1}|$\\
+
+$\displaystyle|y_{n+1}|-|y_n|=\sqrt{4ax_n+16a^2+\frac{16a^3}{x_n}}-\sqrt{4ax_n}=\frac{16a^2+\frac{16a^3}{x_n}}{\sqrt{4ax_n+16a^2+\frac{16a^2}{x_n}}+\sqrt{4ax_n}}=\frac{\frac{16a^2}{\sqrt{x_n}}+\frac{16a^3}{x_n\sqrt{x_n}}}{\sqrt{4a+\frac{16a^2}{x_n}+\frac{16a^2}{x_n^2}}+\sqrt{4a}}$\\
+
+$\therefore$\qquad$\displaystyle\lim \limits_{n \to \infty}\left(|y_{n+1}|-|y_n|\right)=\frac{0}{\sqrt{4a}+\sqrt{4a}}=0$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#4}\\
+
+According to the question, we know that:\\
+
+$f(x)=\begin{cases}
+\displaystyle\frac{x^2+x}{x+2} & \text{x$\geq$-1}\\
+\qquad\\
+\displaystyle-\frac{x^2+x}{x+2} & \text{x$<$-1, x$\neq$-2}
+\end{cases}$\\
+
+(a)\\
+
+when $a>-1$, $f'(x)=\displaystyle\frac{(2x+1)(x+2)-(x^2+x)}{(x+2)^2}$\\
+
+when $a=-2$ $f(x)$ is not defined, it can't be differentiated.\\
+
+when $a<-1$ and $a\neq-2$, $f'(x)=\displaystyle\frac{(x^2+x)-(2x+1)(x+2)}{(x+2)^2}$\\
+
+when $a=-1$, $f(-1)=0$\\
+
+$\therefore$\qquad$f'_+(-1)=\lim \limits_{h \to 0}\displaystyle\frac{\frac{(h-1)^2+(h-1)}{h-1+2}}{h}=\lim \limits_{h \to 0}\frac{h-1}{h+1}=-1$ and $f'_-(-1)=\lim \limits_{h \to 0}\frac{-\frac{(h-1)^2+(h-1)}{h-1+2}}{h}=1\neq-1$\\
+
+$\therefore$\qquad $f(x)$ is not differentiated at $-1$\\
+
+$\therefore$\qquad$a\in(-\infty,-2)\cup(-2,-1)\cup(-1,+\infty)$\\
+
+(b)\\
+
+let $f'(x)<0$, and solve for x, we can get: $x\in(-\infty,-\sqrt{2}-2)\cup(-1,\sqrt{2}-2)$\\
+
+let $f'(x)=0$, and solve for x, we can get: $x=-\sqrt{2}-2$ or $x=\sqrt{2}-2$\\
+
+let $f'(x)>0$, and solve for x, we can get: $x\in(-\sqrt{2}-2,-1)\cup(\sqrt{2}-2,+\infty)$\\
+
+(c)\\
+
+as fig.1 shows\\
+
+\begin{figure}[H]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=5cm]{HW8.eps}\\
+  \caption{graph y=f(x)}\label{fig.1}
+\end{figure}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#5}\\
+
+(a)\\
+
+$\because$\qquad$f'(x)=\left(e^{\log x^{\displaystyle\frac{1}{x}}}\right)'=\left(e^{\displaystyle\frac{1}{x}\log x}\right)'$, and $\left(\displaystyle\frac{1}{x}\log x\right)'=\displaystyle\frac{1}{x^2}-\frac{1}{x^2}\log x$\\
+
+$\therefore$\qquad$f'(x)=\displaystyle x^{\frac{1}{x}}\cdot\frac{1}{x^2}\left(1-\log x\right)$\qquad$x\in[1,+\infty)$\\
+
+let $f'(x)>0, f'(x)=0, f'(x)<0$ and solve for $x$, we can get:\\
+
+\begin{tabular}{|l|l|l|l|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $x$ & $[1,e)$ & $e$ & $(e,+\infty)$\\ \hline
+  $f$ & $\nearrow$ & $max$ & $\searrow$\\ \hline
+  $f'$ & $+$ & $0$ & $-$\\
+  \hline
+\end{tabular}\\
+
+$\therefore$\qquad the maximum value is $\displaystyle f(e)=e^{\frac{1}{e}}$\\
+
+(b)\\
+
+according to (a)\\
+
+when $x\leq2$, $f(x)$ is monotone increasing, so $f(2)$ is greater than any $f(x)$ that $x\in[1,2]$\\
+
+when $x\geq3$, $f(x)$ is monotone decreasing, so $f(3)$ is greater than any $f(x)$ that $x\in[3,+\infty)$\\
+
+besides, $f(2)=\displaystyle2^{\frac{1}{2}}<f(3)=3^{\frac{1}{3}}$\\
+
+therefore, $f(3)$ is greater than any $f(x)$ that $x\in[1,2]\cup[3,+\infty)$\\
+
+and $N\subset[1,2]\cup[3,+\infty)$, $3\in N$\\
+
+$\therefore$\qquad the maximum value of $\displaystyle n^{\frac{1}{n}}$ is $\displaystyle3^{\frac{1}{3}}$ when $n\in N$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#6}\\
+
+(a)\\
+
+Prove it by m.i.\\
+
+when $n=1$, $1+x\geq1+x$\\
+
+assume that when $n=k$, $(1+x)^k\geq1+kx$\\
+
+then we can get: $(1+x)^{k+1}>(1+kx)(1+x)=1+kx+x+kx^2=1+(1+k)x+kx^2\geq1+(1+k)x$\\
+
+$\therefore$\qquad$(1+x)^n\geq1+nx$\\
+
+(b)\\
+
+$\displaystyle\frac{\left(1+\frac{1}{n}\right)^n}{\left(1+\frac{1}{n-1}^{n-1}\right)}=\left(\frac{\frac{n+1}{n}}{\frac{n}{n-1}}\right)^{n-1}\cdot\left(1+\frac{1}{n}\right)=\left(\frac{n^2-1}{n^2}\right)^{n-1}\cdot\left(1+\frac{1}{n}\right)=\left(1-\frac{1}{n^2}\right)^{n-1}\cdot\left(1+\frac{1}{n}\right)$\qquad$\star$\\
+
+$\because$\qquad $-1<-\displaystyle\frac{1}{n^2}<0$\\
+
+and according to (a), we can get:\\
+
+$\displaystyle\star\geq\left(1-\frac{n-1}{n^2}\right)\left(1+\frac{1}{n}\right)=\left(1-\frac{1}{n}+\frac{1}{n^2}\right)\left(1+\frac{1}{n}\right)=1+\frac{1}{n^3}>1$\\
+
+$\therefore$\qquad$\displaystyle\left(1+\frac{1}{n}\right)^n\geq\left(1+\frac{1}{n-1}\right)^{n-1}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#7}\\
+
+we set $g(x)=e^{x-1}$ and $h(x)=x$\\
+
+$\therefore$\qquad$g(1)=h(1)=1$\\
+
+and we know that $g'(x)=e^{x-1}$, $\displaystyle\frac{d^2}{dx^2}g(x)=e^{x-1}>0$ for $x\in R$\\
+
+$\therefore$\qquad $g'(x)$ is strictly increasing function\\
+
+$\therefore$\qquad when $x>1$, $g'(x)>g'(1)=h'(x)=1$, so $g(x)>h(x)$\\
+
+\qquad\quad when $x<1$, $g'(x)<g'(1)=h'(x)=1$, so $g(x)>h(x)$\\
+
+$\therefore$\qquad$g(x)\geq h(x)\Rightarrow g(x)-h(x)=f(x)\geq0$\\
+
+(b)\\
+
+according to (a), we know that:\\
+
+$f(a_i/A)=\displaystyle\frac{e^{\frac{a_in}{a_1+\cdots+a_n}}}{e}-\frac{a_in}{a_1+\cdots+a_n}\geq0$\\
+
+$\therefore$\qquad$\displaystyle\frac{e^{\frac{a_1n}{a_1+\cdots+a_n}}}{e}\geq\frac{a_1n}{a_1+\cdots+a_n}, \frac{e^{\frac{a_2n}{a_1+\cdots+a_n}}}{e}\geq\frac{a_2n}{a_1+\cdots+a_n}, \cdots, \frac{e^{\frac{a_nn}{a_1+\cdots+a_n}}}{e}\geq\frac{a_nn}{a_1+\cdots+a_n}$\\
+
+after multiply them up, we can get:\\
+
+$\displaystyle\frac{e^n}{e^n}\geq\frac{a_1\cdot a_2\cdots a_n\cdot n^n}{(a_1+\cdots+a_n)^n}$\\
+
+$\therefore$\qquad$\displaystyle\frac{a_1+\cdots+a_n}{n}\geq\sqrt[n]{a_1\cdot a_2\cdots a_{n-1}\cdot a_n}$\\
+
+\end{document}

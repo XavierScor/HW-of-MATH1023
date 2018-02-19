@@ -1,0 +1,239 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\author{GONG,Xianjin}
+\title{Homework 2 of Honor Calculus}
+
+\begin{document}
+\maketitle
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral1}}}(for peer review)
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.1.44}\\
+
+By $\lim \limits_{n \to \infty}x_n=l>0$ and the order rule, we know $\frac{l}{2}<x_n<2l$ for sufficiently big n. This implies $\sqrt[n]{\frac{l}{2}}<\sqrt[n]{x_n}<\sqrt[n]{2l}$.\\
+
+And by $\lim \limits_{n \to \infty}\sqrt[n]{\frac{l}{2}} = 1$, $\lim \limits_{n \to \infty}\sqrt[n]{2l} = 1$ and sandwich rule.\\
+
+We get $\lim \limits_{n \to \infty}\sqrt[n]{x_n} = 1$\\
+
+For $x_n$ converging to 0, and $\sqrt[n]{x_n}$ converging to $0.32$, $x_n = \frac{0.32^n}{n}$ can fulfill the requirement.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.1.46(4)}\\
+
+According to the question. We can get:\\
+
+\centerline{$(n^{2}4^{2n-1}-5^{n})^{\frac{n-1}{n^2+1}} = \left[1- \frac{4}{n^2} \left(\frac{5}{16} \right)^n \right]^{\frac{n-1}{n^2+1}} n^{\frac{2n-2}{n^2+1}} \left(4^{2n-1} \right)^{\frac{n-2}{n^2+1}}$}
+
+\vspace{3.5mm}
+
+By
+$\frac{1}{2}< \lim \limits_{n \to \infty} \left[1- \frac{4}{n^2}\left(\frac{5}{16}\right)^n\right]=1<2$,\\
+
+we can get that for sufficiently big n\\
+
+$\frac{1}{2}<1-\frac{4}{n^2}\left(\frac{5}{16}\right)^n<2$.\\
+
+$\therefore$\qquad$\left(\frac{1}{2}\right)^{\frac{n-1}{n^2+1}}<\left[1-\frac{4}{n^2}\left(\frac{5}{16}\right)^n\right]^{\frac{n-1}{n^2+1}}<2^{\frac{n-1}{n^2+1}}$\\
+
+By $\left(\frac{1}{2}\right)^{\frac{1}{4n}}<\left(\frac{1}{2}\right)^{\frac{n-1}{n^2+1}}<\left(\frac{1}{2}\right)^{\frac{1}{n}}, \lim \limits_{n \to \infty}\left(\frac{1}{2}\right)^{\frac{1}{4n}} = 1, \lim \limits_{n \to \infty}\left(\frac{1}{2}\right)^{\frac{1}{n}}=1$\\
+
+\qquad $2^{\frac{1}{4n}}<2^{\frac{n-1}{n^2+1}}<2^{\frac{1}{n}}, \lim \limits_{n \to \infty}2^{\frac{1}{4n}} = 1, \lim \limits_{n \to \infty}2^{\frac{1}{n}}=1$, and sandwich rule\\
+
+$\lim \limits_{n \to \infty}\left[1-\frac{4}{n^2}\left(\frac{5}{16}\right)^n\right]^{\frac{n-1}{n^2+1}} = 1$.\\
+
+By
+$n^{\frac{1}{2n}}<n^{\frac{2n-2}{n^2+1}}<n^{\frac{2}{n}}, \lim \limits_{n \to \infty}2^{\frac{1}{2n}} = 1, \lim \limits_{n \to \infty}2^{\frac{2}{n}}=1$, and sandwich rule\\
+
+$\lim \limits_{n \to \infty}n^{\frac{2n-2}{n^2+1}}=1$.\\
+
+By
+$\lim \limits_{n \to \infty}(2n-1)\frac{n-2}{n^2+1}=\lim \limits_{n \to \infty}\frac{\left(2-\frac{1}{n}\right)\left(1-\frac{2}{n}\right)}{1+\frac{1}{n^2}} = 2$\\
+
+$\therefore$\qquad $\lim \limits_{n \to \infty}\left(4^{2n-1}\right)^{\frac{n-2}{n^2+1}} = 16$\\
+
+\vspace{3.5mm}
+
+$\therefore$\qquad $\lim \limits_{n \to \infty}\left(n^{2}4^{2n-1}-5^n\right)^{\frac{n-1}{n^2+1}} =16$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.1.53}\\
+
+$\because$\qquad$\lim \limits_{n \to \infty}\frac{x_n}{x_{n-1}} = l$ and $|l|<1$\\
+
+$\therefore$ \qquad $\exists N$ for $n>N$, $x_n=\frac{x_n}{x_{n-1}}\cdots\frac{x_{N+1}}{x_N}x_N=cl^n$\qquad$c=l^(-N)x_N$\\
+
+By $\lim \limits_{cl^n}=c\lim \limits{n \to \infty}=0$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty} = 0$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.1.54(3)}\\
+
+Assume that $x_n=\frac{{n!}^3}{3n!}a^n$\\
+
+$\therefore$ \qquad $\frac{x_n}{x_{n-1}}=\frac{an^3}{(3n+3)(3n+2)(3n+1)}$\\
+
+$\therefore$ \qquad $\lim \limits_{n \to \infty}{\frac{x_n}{x_{n-1}}}=\frac{a}{27}$\\
+
+According to \#1.1.53, in order to get $\lim \limits_{n \to \infty}x_n = 0$, $\left|\frac{a}{27}\right|<1$\\
+
+$\therefore$ \qquad $-27<a<27$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.1.56(3)}\\
+
+According to the question, we can get:\\
+
+$2n$ is on of $n^{(-1)^n}$'s subsequences\\
+
+Besides when $n \to \infty$, $2n \to \infty$\\
+
+$\therefore$\qquad$2n$ diverges\\
+
+$\therefore$\qquad$n^{(-1)^n}$ diverges too.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.2.1}\\
+
+$\because$\qquad$(n-1)^2=n^2-2n+1>0$\qquad$\therefore$\qquad$n^2+1>2n>n$\\
+
+$\therefore$\qquad$\left|\frac{n^2-1}{n^2+1}-1\right|=\frac{2}{n^2+1}<\frac{2}{n}$\\
+
+So for any $\epsilon>0$, choose $N=\frac{2}{\epsilon}$.\\
+
+\centerline{$n>N\Rightarrow\left|\frac{n^2-1}{n^2+1}-1\right|<\frac{2}{n}<\frac{2}{N}=\epsilon$}
+
+\vspace{3.5mm}
+
+This verifies the rigorous defination of $\lim \limits_{n \to \infty}\frac{n^2-1}{n^2+1}=1$.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.2.9(4)}\\
+
+To rigorous prove $\lim \limits_{n \to \infty}\frac{2n^2-3n+3}{3n^2-4n}=\frac{2}{3}$\\
+
+We can get: for any $\epsilon>0$ and sufficiently big $n$, we have\\
+
+\centerline{$n>N=\frac{4}{3}-\frac{1}{9\epsilon}\Rightarrow\left|\frac{2n^2-3n+3}{3n^2-4n}-\frac{2}{3}\right|=\left|\frac{n}{9n^2-12n+3}\right|<\frac{n}{12n-9n^2}<\epsilon$}
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}\frac{2n^2-3n+3}{3n^2-4n}=\frac{2}{3}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.2.11(4)}\\
+
+To rigorously prove $\lim \limits_{n \to \infty}\frac{n^{5.4}3^n}{n!} = 0$\\
+
+We can get: for any $\epsilon>0$ and sufficiently big $n$, we have\\
+
+\centerline{$n>N=max\{4,\frac{5}{1-\sqrt[6]{\frac{3^8}{2\epsilon}}}\}\Rightarrow\left|\frac{n^{5.4}3^n}{n!}-0\right|<\frac{{n^6}3^n}{n!}\leq\frac{n^6}{{n-5}^6}3^6\frac{9}{2}<\epsilon$}
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}\frac{n^{5.4}3^n}{n!}=0$\\
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral2}}}
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1}\\
+
+According to the question, we can get $y_n=\sin{(na+x_n)}=\sin{na}\cos{x_n}+\cos{na}\sin{x_n}$\\
+
+$\therefore$\qquad for sufficiently big n, $y_n\rightarrow\sin{na}$\\
+
+Assume a new sequence $\{n_i\}=\sin{n_i}(\frac{\pi}{2}+k\pi-\frac{a}{2}<n_i<\frac{\pi}{2}+k\pi+\frac{a}{2})$\\
+
+We can know that this is a subsequence of the original one. And $\{n_i\}$ is above $\sin{(\frac{\pi}{2}-\frac{a}{2})}$\\
+
+Assume another new sequence $\{n_i\}=\sin{n_j}(k\pi-\frac{a}{2}<n_j<k\pi+\frac{a}{2})$\\
+
+We can know that this is a subsequence of the original one. And $\{n_j\}$ is below $\sin{(\frac{a}{2})}$\\
+
+$\therefore$\qquad There is no chance for them to converge to the same limit.\\
+
+$\therefore$\qquad $\{y_n\}$ diverges.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2}\\
+
+According to the question, we can get\\
+
+\centerline{$\forall\epsilon>0$, $\exists N_1$, $\forall n>N_1\Rightarrow\left|x_n-A\right|<\epsilon\qquad\cdots\textcircled{1}$}
+\centerline{$\forall\epsilon>0$, $\exists N_2$, $\forall n>N_2\Rightarrow\left|y_n-B\right|<\epsilon\qquad\cdots\textcircled{2}$}
+
+\vspace{3.5mm}
+
+Assume that $N>N_1+N_2$, $\forall n>N$, $\left|x_n-A\right|<\frac{A-B}{2}$ and $\left|y_n-B\right|<\frac{A-B}{2}$\\
+
+That is to say $\frac{A+B}{2}<x_n<\frac{3A-B}{2}$ and $\frac{A+B}{2}<y_n<\frac{3A-B}{2}$
+
+(i)$A>B$\\
+
+So for sufficiently n, we can get that $x_n-y_x>0$, so $x_n>y_n$\\
+
+$\therefore$\qquad $z_n=x_n$\\
+
+$\therefore$\qquad according to $\textcircled{1}$, $z_n$ converges to $A$.\\
+
+(ii)$A<B$\\
+
+So for sufficiently n, we can get that $x_n-y_x<0$, so $x_n<y_n$\\
+
+$\therefore$\qquad $z_n=y_n$\\
+
+$\therefore$\qquad according to $\textcircled{2}$, $z_n$ converges to $B$.\\
+
+(iii)$A=B$\\
+
+Obviously, no matter $z_n=y_n$ or $x_n$, it will eventually converge to $A=B$.\\
+
+$\therefore$\qquad$z_n$ converges to $\max\{A,B\}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#3}\\
+
+My guess is 1\\
+
+To rigorously prove $\lim \limits_{n \to \infty}\frac{n-2^{x_n}}{n+{x_n}^2} = 1$.\\
+
+According to the quesiton, we can get:\\
+
+\centerline{$\forall\epsilon>0$, $\exists N$, $\forall n>N$, $\left|x_n-L\right|<\epsilon$}
+
+\vspace{3.5mm}
+
+So for sufficiently big n, $\frac{L}{2}<x_n<2L$\\
+
+$\therefore$\qquad$\forall\epsilon>0$, $\exists N=\frac{L^2+2L}{n}$,\\
+
+$\qquad\quad\forall n>N\Rightarrow\left|\frac{n-2^{x_n}}{n+{x_n}^2}-1\right|=\frac{{x_n}^2+2x_n}{n+{x_n^2}}<\frac{{x_n}^2+2x_n}{n}<\epsilon$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}\frac{n-2^{x_n}}{n+{x_n}^2}=1$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#4}\\
+
+To rigourously prove $\lim \limits_{n \to \infty}\frac{[x]+[2x]+\cdots +[nx]}{n^2}=\frac{x}{2}$\\
+
+We can get: $\forall\epsilon>0$, $\exists N=\frac{x}{2\epsilon}$,\\
+
+$\forall n>N\Rightarrow\left|\frac{[x]+[2x]+\cdots +[nx]}{n^2}-\frac{x}{2}\right|<\frac{x+2x+\cdots+nx}{n^2}-\frac{x}{2}=\frac{n(n+1)}{2}\frac{x}{n^2}-\frac{x}{2}=\frac{x}{2n}<\epsilon$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}\frac{[x]+[2x]+\cdots +[nx]}{n^2}=\frac{x}{2}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#5}\\
+
+According to the question, we can get:\\
+
+$\lim \limits_{n \to \infty}\frac{a_{n+1}}{a_n}=\lim \limits_{n \to \infty}\frac{P(b_{n+1})b_{n+1}}{Q{b_n+1}b_n}=L$, $\lim \limits_{n \to \infty}\frac{a_n}{a_{n-1}}=\lim \limits_{n \to \infty}\frac{P(b_n)b_n}{Q(b_n)b_{n-1}}=L$\\
+ 
+$\therefore$\qquad$\lim \limits{n \to \infty}\frac{P(b_{n+1})Q(b_n)b_{n+1}}{Q(b_{n+1})P(b_n)b_{n-1}}=1$\\
+
+Besides $\lim \limits{n \to \infty}\frac{a_{n+1}}{a_n}=\lim \limits{n \to \infty}\frac{P(b_{n+1})Q(b_n)}{Q(b_{n+1})P(b_n)}=L$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}\frac{b_{n+1}}{b_{n-1}}=\frac{1}{L}$\\
+
+Besides $\lim \limits{n \to \infty}\frac{a_{n+1}}{a_n}=\frac{\frac{b_{n+1}}{b_{n+2}}}{\frac{b_n}{b_{n+1}}}=L$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}\frac{{b_{n+1}}^2}{b_{n+2}b_n}=L$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}\frac{1}{{a_n}^2}=1$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}a_n=1$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}\frac{a_{n+1}}{a_n}=1$\\
+
+\end{document}

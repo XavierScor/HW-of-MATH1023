@@ -1,0 +1,241 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\author{GONG,Xianjin}
+\title{Homework 3 of Honor Calculus}
+
+\begin{document}
+\maketitle
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral1}}}(for peer review)
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.3.3(1)}\\
+
+According to the question, we can get:\\
+
+$\displaystyle x_n<\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\cdots+\frac{1}{n^2}<1+1-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\cdots+\frac{1}{(n-1)^2}-\frac{1}{n^2}<2$\\
+
+Besides, $\displaystyle x_n-x_{n-1}=\frac{1}{n^3}>0$\\
+
+$\therefore$\qquad$x_n$ is clearly increasing. And it is bounded above.\\
+
+$\therefore$\qquad$x_n$ converges.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.3.3(3)}\\
+
+According to the quesiton, we can get:\\
+
+$\displaystyle x_n=\frac{1}{2}\left(1-\frac{1}{3}+\frac{1}{3}-\frac{1}{5}+\cdots+\frac{1}{2n-1}-\frac{1}{2n+1}\right)<\frac{1}{2}$\\
+
+Besides, $\displaystyle x_n-x_{n-1}=\frac{1}{(2n+1)(2n-1)}=\frac{1}{4n^2-1}$\\
+
+$\because$\qquad$n\geq1$\\
+
+$\therefore$\qquad$\displaystyle \frac{1}{4n^2-1}>0 $\\
+
+$\therefore$\qquad$x_n$ is clearly increasing. And it is bounded above.\\
+
+$\therefore$\qquad$x_n$ converges.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.3.14}\\
+
+$\because$\qquad $0<a<1$\\
+
+$\therefore$\qquad $(n+1)a^{n+1}-na^n=a^n\left[(a-1)n+a\right]<0$ for sufficiently big $n$\\
+
+\quad\qquad Besides, $na^n>0$ for all $n$\\
+
+$\therefore$\qquad when $n \to \infty$, $na^n$ converges\\
+
+$\therefore$\qquad we have $\displaystyle l=\lim \limits_{n \to \infty}na^n=\lim \limits_{n \to \infty}(n-1)a^{n-1}\frac{n}{n-1}a=la$\\
+
+\quad\qquad Since $a\ne1$, so $l=0$.\\
+
+$\therefore$\qquad $\lim \limits_{n \to \infty}na^n=0$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.3.16(4)}\\
+
+According to the question, we can get:\\
+
+$\displaystyle \left(1+\frac{1}{n}\right)^n<\left(1+\frac{1}{n-\frac{1}{2}}\right)^n<\left(1+\frac{1}{n-1}\right)^{n-1}\left(1+\frac{1}{n-1}\right)$\\
+
+$\because$\qquad $\lim \limits_{n \to \infty}\left(1+\frac{1}{n}\right)^n=e$,\quad $\lim \limits_{n \to \infty}\left(1+\frac{1}{n-1}\right)^{n-1}\left(1+\frac{1}{n-1}\right)=\lim \limits_{n \to \infty}\left(1+\frac{1}{n-1}\right)^{n-1}\lim \limits_{n \to \infty}\left(1+\frac{1}{n-1}\right)=e$\\
+
+$\therefore$\qquad by sandwich rule, we can get $\lim \limits_{n \to \infty}\left(1+\frac{1}{n-\frac{1}{2}}\right)^n=e$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.3.22(2)}\\
+
+According to the question, we can get:\\
+
+$\forall \epsilon>0$ $\displaystyle \exists m=2n>n>N=\frac{1}{\sqrt{\epsilon}}$ s.t. \\
+
+$\displaystyle |x_m-x_n|=\frac{(-1)^{n+2}}{(n+1)^3}+\frac{(-1)^{n+3}}{(n+2)^3}+\cdots+\frac{(-1)^{m+1}}{(m)^3}<\frac{n}{n^3}=\epsilon$\\
+
+$\therefore$\qquad the sequence is cauchy, so it converges.\\
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral2}}}
+
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1 (\#1.3.12)}\\
+
+$\textcircled{1}$\qquad according to the question, we can get:\\
+
+\quad\qquad$\displaystyle y_{n+1}=\frac{x_{n+2}}{x_{n+1}}=\frac{x_{n+1}+x_n}{x_{n+1}}=1+\frac{x_n}{x_{n+1}}=1+\frac{1}{y_n}$\\
+
+$\textcircled{2}$\qquad Assume that $y_n$ converges, so we can get:\\
+
+\quad\qquad$\lim \limits_{n \to \infty}y_{n+1}=\lim \limits_{n \to \infty}\left(1+\frac{1}{y_n}\right)$\\
+
+\quad\qquad$\therefore$\qquad$\displaystyle l=\frac{\sqrt{5}+1}{2}$\\
+
+$\textcircled{3}$\qquad$\because$\qquad$\displaystyle y_{n+1}=1+\frac{1}{y_n}$\\
+
+\quad\qquad$\therefore$\qquad$\displaystyle y_{n+2}=\frac{2y_n+1}{y_n+1}$\\
+
+\quad\qquad By M.I., we can get:\\
+
+\quad\qquad For $n=1$, $\displaystyle y_n=2>\frac{\sqrt{5}+1}{2}$\\
+
+\quad\qquad For $n=k$, we assume that $y_k>\displaystyle \frac{\sqrt{5}+1}{2}$\\
+
+\quad\qquad$\therefore$\qquad when $n=k+2$, $\displaystyle y_k+2=\frac{2y_n+1}{y_n+1}=1+\frac{1}{1+\frac{1}{y_n}}>\frac{2\sqrt{5}+4}{\sqrt{5}+3}=\frac{\sqrt{5}+1}{2}$\\
+
+\quad\qquad$\therefore$\qquad $l$ is the lower band of $y_{2k+1}$\\
+
+\quad\qquad Again by M.I., we can get:\\
+
+\quad\qquad For $n=2$, $\displaystyle y_n=\frac{3}{2}<\frac{\sqrt{5}+1}{2}$\\
+
+\quad\qquad For $n=k$, we assume that $y_k<\displaystyle \frac{\sqrt{5}+1}{2}$\\
+
+\quad\qquad$\therefore$\qquad when $n=k+2$, $\displaystyle y_k+2=\frac{2y_n+1}{y_n+1}=1+\frac{1}{1+\frac{1}{y_n}}<\frac{2\sqrt{5}+4}{\sqrt{5}+3}=\frac{\sqrt{5}+1}{2}$\\
+
+\quad\qquad$\therefore$\qquad $l$ is the lower band of $y_{2k}$\\
+
+$\textcircled{4}$\qquad According to the question $\textcircled{3}$, we can get:\\
+
+\quad\qquad $\displaystyle y_{2k+1}>\frac{\sqrt{5}+1}{2}$ and $\displaystyle y_{2k+1}>\frac{\sqrt{5}+1}{2}$\\
+
+\quad\qquad Besides, $\displaystyle y_{n+1}-y_n=\frac{{y_n}^2-y_n-1}{y_n}$\\
+
+\quad\qquad $\therefore$\qquad $y_{n+1}-y_n>0$ when $n=2k$, and $y_{n+1}-y_n<0$ when $n=2k+1$\\
+
+\quad\qquad $\therefore$\qquad $y_{2k+1}$ is increasing, and $y_{2k}$ is decreasing.\\
+
+$\textcircled{5}$\qquad According to $\textcircled{3}$ and $\textcircled{4}$, we can get:\\
+
+\quad\qquad Both $y_{2k+1}$ and $y_{2k}$ are monotone sequence, and they are bounded. So they both converges.\\
+
+\quad\qquad According to $\textcircled{2}$, if they converge, they share the same limit $\frac{\sqrt{5}+1}{2}$\\
+
+\quad\qquad Besides $\{y_{2k+1}\}\cup\{y_{2k}\}=\{y_n\}$\\
+
+\quad\qquad $\therefore$\qquad $y_n$ converges to $l$.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2 (\#1.3.21)}\\
+
+Because of $|r|<1$, we know that $nr^n$ converges.\\
+
+So $\forall\epsilon>0$ $\exists n>N$ s.t. $\displaystyle nr^n<\frac{\epsilon}{rl}$\\
+
+So $\forall\epsilon>0$ $\exists m=2n>n>N$ s.t. $|x_m-x_n|=c_{n+1}r^{n+1}+c_{n+2}r^{n+2}+\cdots+c_mr^m$\\
+
+Since $c_n$ is bounded, assume that its upper bound is $l$\\
+
+So $|x_m-x_n|<lr^{n+1}+lr^{n+2}+\cdots+lr^m<nlr^{n+1}<\epsilon$\\
+
+So it is cauchy\\
+
+$\therefore$\qquad $x_n$ converges\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#3}\\
+
+(a) According to the Problem \#5 in Homework \#1, we can get:\\
+
+$\displaystyle u_{n+2}=\frac{b_{n+2}}{a_{n+2}}=\frac{2a_{n+1}+b_{n+1}}{a_{n+1}+b_{n+1}}=\frac{2a_n+2b_n+2a_n+b_n}{a_n+b_n+2a_n+b_n}=\frac{4a_n+3b_n}{3a_n+2b_n}=\frac{3u_n+4}{2u_n+3}$\\
+
+
+(b) According to the Problem \#5 in Homework \#1, we can get: \\
+
+$\displaystyle \frac{b_n}{a_n}=\frac{1+\left(\frac{1-\sqrt{2}}{1+\sqrt{2}}\right)^n}{1-\left(\frac{1-\sqrt{2}}{1+\sqrt{2}}\right)^n}\sqrt{2}$\\
+
+And $\displaystyle \frac{b_n}{a_n}-\sqrt{2}=2\sqrt{2}\frac{2\left(\frac{1-\sqrt{2}}{1+\sqrt{2}}\right)^n}{1-\left(\frac{1-\sqrt{2}}{1+\sqrt{2}}\right)^n}$\\
+
+Besides, $\displaystyle u_{n+2}-u_n=\frac{4-2{u_n}^2}{2u_n+3}$\\
+
+$\therefore$\qquad For $n=2k+1$, $u_n<\sqrt{2}$, so $u_{2k+1}$ is increasing and bounded by $\sqrt{2}$.\\
+
+\qquad\quad        For $n=2k$, $u_n>\sqrt{2}$, so $u_{2k}$ is decreasing and bounded by $\sqrt{2}$.\\
+
+(c) According to (a) and (b), both $u_{2k}$ and $u_{2k+1}$ converges. So we can get:\\
+
+$\displaystyle \lim \limits_{n \to \infty}u_{n+2}=\lim \limits_{n \to \infty}\frac{3u_n+4}{2u_n+3}$\\
+
+So we can get $\lim \limits_{n \to \infty}u_n=\sqrt{2}$ for both $n=2k$ and $n=2k+1$.\\
+
+And $\{u_{2k}\}\cup\{u_{2k+1}\}=\{u_n\}$\\
+
+So $u_n$ converges to $\sqrt{2}$.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#4}\\
+
+According to the question, we can get:\\
+
+$\forall \epsilon>0$, $\exists n>N_0$ s.t. $|x_n|<\epsilon$\\
+
+$\therefore$\qquad$\forall \epsilon>0$, $\exists m=2n>n>N$ s.t. $|x_n|<\frac{\epsilon}{m-n}$\\
+
+$\therefore$\qquad$\left|S_m-S_n\right|<\left|x_{n+1}\right|+\left|x_{n+2}\right|+\cdots+\left|x_m\right|<\epsilon$\\
+
+$\therefore$\qquad$S_n$ is cauchy, so it converges.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#5}\\
+
+(a) According to the question, we can get:\\
+
+$\displaystyle T_{n,k}=\frac{n!}{n^kk!(n-k)!}$\\
+
+$\therefore$\qquad$\displaystyle \frac{T_{n,k}}{\frac{r!}{k!}T_{n,r}}=\frac{n^r(n-r)!}{n^kn-k)!}<1$\\
+
+$\therefore$\qquad$\displaystyle T_{n,k}<\frac{r!}{k!}T_{n,r}$\\
+
+$\therefore$\qquad$\displaystyle T_{n,r+1}<\frac{r!}{r+1!}T_{n,r}=\frac{1}{r!}\frac{n!}{(r+1)n^r(n-r)}$\\
+
+\qquad\quad$\displaystyle T_{n,r+2}<\frac{r!}{r+2!}T_{n,r}=\frac{1}{r!}\frac{n!}{(r+2)n^r(n-r)}$\\
+
+\qquad\quad$\cdots$\\
+
+\qquad\quad$\displaystyle T_{n,k}<\frac{r!}{k!}T_{n,r}=\frac{1}{r!}\frac{n!}{kn^r(n-r)}$\\
+
+\qquad\quad besides, $\displaystyle\frac{n!}{(r+1)n^r(n-r)}$, $\displaystyle\frac{n!}{(r+2)n^r(n-r)}$, $\cdots$, $\displaystyle\frac{n!}{kn^r(n-r)}<\frac{1}{r}$
+
+\qquad\quad sum them up, we can get:\\
+
+\qquad\quad $\displaystyle\sum_{k=r+1}^{n}T_{n,r}<\frac{1}{r}\frac{1}{r!}$\\
+
+(b) According to the question, we can get:\\
+
+$e=\sum_{k=0}^{n}T_{n,k}=\sum_{k=0}^{r}+\sum_{k=r+1}^{n}$\\
+
+Besides, $T_{n,r}<\frac{1}{r!}$\\
+
+$\therefore$\qquad$\left|e-\left(1+\frac{1}{1!}+\frac{1}{2!}+\cdots+\frac{1}{r!}\right)\right|<\left|e-\sum_{k=0}^{r}\right|<\sum_{k=r+1}^{n}T_{n,k}<\frac{1}{r}\frac{1}{r!}$\\
+
+(c) Suppose $e$ is rational, we can write $e$ as $\frac{p}{r}$, and according to the formal question, we can get:\\
+
+$\left|e-\left(1+\frac{1}{1!}+\frac{1}{2!}+\cdots+\frac{1}{r!}\right)\right|<\frac{1}{r}\frac{1}{r!}$\\
+
+$\therefore$\qquad$\left|\frac{p}{r}-\left(1+\frac{1}{1!}+\frac{1}{2!}+\cdots+\frac{1}{r!}\right)\right|<\frac{1}{r}\frac{1}{r!}$\\
+
+$\therefore$\qquad$\left|p(r-1)!-\left(r!+(r-1)!+(r-2)!+\cdots+1\right)\right|<\frac{1}{r}$\\
+
+The left side should be integral, but the right side is not when n is sufficiently big.\\
+
+$\therefore$\qquad$e$ is irrational.\\
+
+\end{document}

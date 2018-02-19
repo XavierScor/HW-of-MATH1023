@@ -1,0 +1,235 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\author{GONG,Xianjin}
+\title{Homework 5 of Honor Calculus}
+
+\begin{document}
+\maketitle
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral1}}}(for peer review)
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.6.3(4)}\\
+
+According to the question, we can get:\\
+
+$\forall\epsilon>0$, $\exists N=\displaystyle\frac{2}{(1-\epsilon)^2-1}$, s.t. when $x<\min{N, -2}$\\
+
+$\displaystyle\left|\frac{x+1}{\sqrt{x^2+1}}+1\right|=\left|-\sqrt{\frac{x^2+2x+1}{x^2+1}}+1\right|=\left|-\sqrt{1+\frac{2x}{x^2+1}}+1\right|=1-\sqrt{1+\frac{2x}{x^2+1}}<1-\sqrt{1+\frac{2}{x}}<\epsilon$\\
+
+$\therefore$\qquad$\displaystyle\lim \limits_{x \to -\infty}\frac{x+1}{\sqrt{x^2+1}}=-1$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.6.4(2)}\\
+
+According to the question, we can get:\\
+
+$\forall\epsilon>0$, $\exists\delta=\sqrt{a}\epsilon$ s.t. $0<|x-1|<\delta$\\
+
+$\therefore$\qquad$\sqrt{x}-\sqrt{a}=\displaystyle\frac{|x|-|a|}{\sqrt{x}+\sqrt{a}}<\frac{|x-a|}{\sqrt{a}}<\epsilon$\\
+
+$\therefore$\qquad$\lim \limits_{x \to a}\sqrt{x}=\sqrt{a}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.6.7}\\
+
+According to the question, we can get:\\
+
+$\forall\epsilon>0$, $\exists\delta_1,\delta_2$ s.t.\\
+
+$0<|x-a|<\delta_1 \Rightarrow |f(x)-L|<\epsilon$\\
+
+$0<|x-a|<\delta_2 \Rightarrow |h(x)-M|<\epsilon$\\
+
+and $f(x)<g(x)<h(x)$\\
+
+$\therefore$\qquad$\forall\epsilon>0$, $\exists\delta=\min\{\delta_1,\delta_2\}$ s.t.\\
+
+\qquad\quad$\-\epsilon+L<f(x)<g(x)<h(x)<\epsilon+L$\\
+
+$\therefore$\qquad$\epsilon+L<g(x)<\epsilon+L$\\
+
+$\therefore$\qquad$|g(x)-L|<\epsilon$\\
+
+$\therefore$\qquad$\lim \limits_{x \to a}g(x)=L$\\
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral2}}}
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1}\\
+
+From the previous question, we know:\\
+
+when $x\in(0,\displaystyle\frac{\pi}{2})$, $x-\sin{x}-\displaystyle\frac{1}{6}x^2<0$\\
+
+and $x-\sin{x}>\displaystyle\frac{1}{6}x^2-\frac{26}{5}Ax^5+\frac{B}{3}x^7-\frac{C}{54}x^9$\\
+
+when $A=\displaystyle\frac{\frac{1}{5^4}}{1-\frac{1}{5^4}}$, $B=\displaystyle\frac{\frac{1}{5^6}}{1-\frac{1}{5^6}}$, $C=\displaystyle\frac{\frac{1}{5^8}}{1-\frac{1}{5^8}}$\\
+
+$\therefore$\qquad$\forall\epsilon>0$, $\exists\delta=\sqrt{\displaystyle\frac{5\epsilon}{52A}}$ and $0<x<\min\{\delta,1\}$ s.t.
+$\displaystyle\left|\frac{x-\sin{x}}{x^3}-\frac{1}{6}\right|$\\
+
+\qquad\quad\quad\qquad\quad$=\left|\frac{x-\sin{x}-\frac{1}{6}x^3}{x^3}\right|<\frac{\frac{26}{5}Ax^5-\frac{B}{3}x^4+\frac{C}{54}x^9}{x^3}$\\
+
+\qquad\quad\quad\qquad\quad$<\frac{26}{5}Ax^2+\frac{C}{54}x^6<\frac{52}{5}Ax^2$\\
+
+\qquad\quad\quad\qquad\quad$<\epsilon$\\
+
+$\therefore$\qquad$\lim \limits_{x \to 0}\left(\displaystyle\frac{x-\sin{x}}{x^3}-\frac{1}{6}\right)=0$\\
+
+$\therefore$\qquad$\lim \limits_{x \to 0}\displaystyle\frac{x-\sin{x}}{x^3}=\frac{1}{6}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2}\\
+
+(a)\\
+
+According to the question, we can get:\\
+
+$\because$\qquad$\lim \limits_{x \to a}f(x)=L$, $\lim \limits_{x \to a}g(x)=M$\\
+
+$\therefore$\qquad$\forall\epsilon_1,\epsilon_2>0$, $\exists\delta_1,\delta_2$ s.t.\\
+
+\qquad\quad$0<|x-a|<\delta_1 \Rightarrow |f(x)-L|<\epsilon_1$\\
+
+\qquad\quad$0<|x-a|<\delta_2 \Rightarrow |g(x)-M|<\epsilon_2$\\
+
+so $\forall\epsilon>0$, $\exists\delta<\min\{\delta_1,\delta_2\}$ and $\epsilon_1=\displaystyle\frac{\epsilon}{2(|k|+1)}$, $\epsilon_2=\min\left\{1,\displaystyle\frac{\epsilon}{2|l|}\right\}$, s.t.
+\begin{align}
+|f(x)g(x)-ML|&=|(f(x)-L)g(x)+L(g(x)-M)|\notag\\
+&<\epsilon_1|M+\epsilon_2|+|L|\epsilon_2\notag\\
+&<\epsilon_1|M+1|+|L|\epsilon_2\notag\\
+&<\epsilon\notag
+\end{align}\\
+
+$\therefore$\qquad$\lim \limits_{x \to a}\left(f(x)g(x)-ML\right)=0$\\
+
+$\therefore$\qquad$\lim \limits_{x \to a}f(x)g(x)=ML$\\
+
+(b)\\
+
+According to the question, we can get:\\
+
+$\because$\qquad$\lim \limits_{x \to a}g(x)=M$\\
+
+$\therefore$\qquad$\forall\epsilon>0$, $\exists\delta$ s.t.\\
+
+\qquad\quad$0<|x-a|<\delta\Rightarrow|g(x)-M|<\epsilon_1$\\
+
+$\therefore$\qquad
+\begin{flushleft}
+\qquad\quad 1) $M>0$\\
+\qquad\quad we can get:\quad$\displaystyle\frac{1}{2}M<g(x)<\frac{5}{2}M$\\
+\qquad\quad and we can denote:\quad$\displaystyle\epsilon_1=\frac{M^2}{2}\epsilon$\\
+\qquad\quad so we can get:$\forall\epsilon>0$, $\exists\delta$ s.t. \\
+\qquad\quad $\left|\displaystyle\frac{g(x)-M}{g(x)M}\right|<2\frac{|g(x)-M|}{M^2}<\epsilon$\\
+\qquad\quad $\therefore$\qquad$\lim \limits_{x \to a}\left(\displaystyle\frac{1}{g(x)}-\frac{1}{M}\right)=0$\\
+\qquad\quad $\therefore$\qquad$\lim \limits_{x \to a}\displaystyle\frac{1}{g(x)}=\frac{1}{M}$\\
+\end{flushleft}
+\begin{flushleft}
+\qquad\quad 2) $M<0$\\
+\qquad\quad we can get:\quad$\displaystyle\frac{1}{2}M<g(x)<\frac{5}{2}M$\\
+\qquad\quad and we can denote:\quad$\displaystyle\epsilon_1=-\frac{5}{2}M^2\epsilon$\\
+\qquad\quad so we can get:$\forall\epsilon>0$, $\exists\delta$ s.t. \\
+\qquad\quad $-\displaystyle\frac{5}{2}M^2<|g(x)M|<-\frac{1}{2}M^2$\\
+\qquad\quad $\left|\displaystyle\frac{g(x)-M}{g(x)M}\right|<\frac{2}{5}\frac{|g(x)-M|}{-M^2}<\epsilon$\\
+\qquad\quad $\therefore$\qquad$\lim \limits_{x \to a}\left(\displaystyle\frac{1}{g(x)}-\frac{1}{M}\right)=0$\\
+\qquad\quad $\therefore$\qquad$\lim \limits_{x \to a}\displaystyle\frac{1}{g(x)}=\frac{1}{M}$\\
+\end{flushleft}
+
+$\therefore$\qquad$\lim \limits_{x \to a}\displaystyle\frac{1}{g(x)}=\frac{1}{M}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#3}\\
+
+According to the question, we can get:\\
+
+$\because$\qquad$\lim \limits_{x \to a}f(x)=L$ and $\lim \limits_{x \to a}g(x)=M$\\
+
+$\therefore$\qquad$\forall\epsilon>0$, $\exists\delta_1$, $\delta_2$ s.t.\\
+
+$0<|x-a|<\delta_1\Rightarrow|f(x)-L|<\epsilon$, and $0<|x-a|<\delta_2\Rightarrow|g(x)-M|<\epsilon$\\
+
+1) when $L=M$\\
+
+$|\max\{f(x)-g(x)\}-L|=|\max\{f(x)-g(x)\}-M|<\epsilon$\\
+
+$\therefore$\qquad$\lim \limits_{x \to a}\max\{f(x),g(x)\}=L=M=\max\{L,M\}$\\
+
+2) when $L<M$\\
+
+we denote $\epsilon<\displaystyle\frac{M-L}{2}$, so $0<|f(x)-L|<\displaystyle\frac{M-L}{2}$ and $0<|g(x)-M|<\displaystyle\frac{M-L}{2}$\\
+
+so we can get:\\
+
+$\forall\epsilon>0$, $\exists\delta=\min\{\delta_1,\delta_2\}$ s.t. when $0<|x-a|<\delta$\\
+
+$f(x)<g(x), |\max\{f(x),g(x)\}-\max\{L,M\}|=|g(x)-M|<\epsilon$\\
+
+$\therefore$\qquad$\lim \limits_{x \to a}\left(\max\{f(x),g(x)\}-\max\{L,M\}\right)=0$\\
+
+$\therefore$\qquad$\lim \limits_{x \to a}\max\{f(x),g(x)\}=\max\{L,M\}$\\
+
+3) when $L>M$\\
+
+we denote $\epsilon<\displaystyle\frac{L-M}{2}$, so $0<|f(x)-L|<\displaystyle\frac{L-M}{2}$ and $0<|g(x)-M|<\displaystyle\frac{L-M}{2}$\\
+
+so we can get:\\
+
+$\forall\epsilon>0$, $\exists\delta=\min\{\delta_1,\delta_2\}$ s.t. when $0<|x-a|<\delta$\\
+
+$f(x)>g(x), |\max\{f(x),g(x)\}-\max\{L,M\}|=|f(x)-L|<\epsilon$\\
+
+$\therefore$\qquad$\lim \limits_{x \to a}\left(\max\{f(x),g(x)\}-\max\{L,M\}\right)=0$\\
+
+$\therefore$\qquad$\lim \limits_{x \to a}\max\{f(x),g(x)\}=\max\{L,M\}$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#4}\\
+
+(a)\\
+
+According to the question, we can get:\\
+
+$\forall\epsilon>0$, $\exists\delta=\displaystyle\frac{\epsilon^2}{2+2\epsilon^2}$, when $0<x<\min\{\delta,\frac{1}{2}\}$ s.t.\\
+
+$\displaystyle\left(\frac{1}{x}\right)^{\frac{1}{\left[\frac{1}{x}\right]}}>1$, and we denote$\displaystyle\left(\frac{1}{x}\right)^{\frac{1}{\left[\frac{1}{x}\right]}}-1=a$\\
+
+so $\displaystyle\frac{1}{x}=(a+1)^{\left[\frac{1}{x}\right]}$\\
+
+\qquad$=\displaystyle1+\left[\frac{1}{x}\right]a+\frac{\left[\frac{1}{x}\right]\left(\left[\frac{1}{x}\right]-1\right)}{2}a^2+\cdots+a^{\left[\frac{1}{x}\right]}$\\
+
+$\therefore$\qquad$\frac{1}{x}-1=\displaystyle\left[\frac{1}{x}\right]a+\frac{\left[\frac{1}{x}\right]\left(\left[\frac{1}{x}\right]-1\right)}{2}a^2+\cdots+a^{\left[\frac{1}{x}\right]}>\frac{\left[\frac{1}{x}\right]\left(\left[\frac{1}{x}\right]-1\right)}{2}a^2$\\
+
+and because $\displaystyle\frac{1}{x}-1<\left[\frac{1}{x}\right]$\\
+
+$\therefore$\qquad$\left[\frac{1}{x}\right]>\frac{\left[\frac{1}{x}\right]\left(\left[\frac{1}{x}\right]-1\right)}{2}a^2$\\
+
+$\therefore$\qquad$a<\sqrt{\frac{2}{\left[\frac{1}{x}\right]-1}}<\sqrt{\frac{2}{\frac{1}{x}-2}}<\epsilon$\\
+
+$\therefore$\qquad$\lim \limits_{x \to 0^+}\displaystyle\left(\frac{1}{x}\right)^{\frac{1}{\left[\frac{1}{x}\right]}}=0$\\
+
+(b)\\
+
+we know that when $0<x<1$, $x<\displaystyle\frac{1}{x}$\\
+
+and $x^x<\displaystyle\frac{1}{x^x}$, and because $\displaystyle\frac{1}{x}>\left[\frac{1}{x}\right]$\\
+
+so $0<x^x<\left(\displaystyle\frac{1}{x}\right)^\frac{1}{\left[\frac{1}{x}\right]}$\\
+
+and by $\lim \limits_{x \to 0^+}0=0$, $\lim \limits_{x \to 0^+}\displaystyle\left(\frac{1}{x}\right)^{\frac{1}{\left[\frac{1}{x}\right]}}=0$ and sandwich rule\\
+
+we can get:\\
+
+$\lim \limits_{x \to 0^+}x^x=0$\\
+
+And we denote $f(x)=x^x$ and $g(x)=1-x^x$\\
+
+when $x$ is approaching to $0$ from right side, $x<1$\\
+
+$\therefore$\qquad$x^x<1$ and $1-x^x>0 and 1-x^x\neq0$\\
+
+so by the composition rule, we can get:\\
+
+$\lim \limits_{x \to 0^+}f\left(g(x)\right)=f(1)=1$\\
+
+\end{document}

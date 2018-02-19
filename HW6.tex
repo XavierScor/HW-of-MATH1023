@@ -1,0 +1,289 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\author{GONG,Xianjin}
+\title{Homework 6 of Honor Calculus}
+
+\begin{document}
+\maketitle
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral1}}}(for peer review)
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.6.17}\\
+
+To prove $\lim \limits_{x \to 0}a^x=1$, by composition rule, it is the same as to prove $\displaystyle\lim \limits_{x \to \infty}a^{\frac{1}{x}}$\\
+
+and we know that $[x]<x<[x]+1$, so $\displaystyle\frac{1}{[x]+1}<\frac{1}{x}<\frac{1}{[x]}$\\
+
+when $a=1$, for sure $\displaystyle\lim \limits_{x \to \infty}a^{\frac{1}{x}}=1$\\
+
+when $a>1$, we can get $\displaystyle a^{\frac{1}{[x]+1}}<a^{\frac{1}{x}}<a^{\frac{1}{[x]}}$\\
+
+besides, $\forall\epsilon>0, \exists N_1$ s.t. $\displaystyle n>N_1\Rightarrow\left|a^{\frac{1}{n}}-1\right|<\epsilon$\\
+
+so, $\forall\epsilon>0, \exists N_2=N_1+1023$ s.t. $\displaystyle [x]>N_2\Rightarrow\left|a^{\frac{1}{[x]+1}}-1\right|<\epsilon,  \left|a^{\frac{1}{[x]}}-1\right|<\epsilon$\\
+
+$\therefore$\qquad$\displaystyle 1-\epsilon<a^{\frac{1}{[x]+1}}<a^{\frac{1}{x}}<a^{\frac{1}{[x]}}<1+\epsilon$\\
+
+$\therefore$\qquad$\displaystyle \left|a^{\frac{1}{x}}-1\right|<\epsilon$\\
+
+$\therefore$\qquad$\displaystyle \lim \limits_{x \to 0}a^x=\lim \limits_{x \to \infty}a^{\frac{1}{x}}=1$\\
+
+when $a<1$, $\lim \limits_{x \to 0}a^x=\lim \limits_{x \to 0}\displaystyle\frac{1}{a^x}=\frac{1}{1}=1$\\
+
+$\therefore$\qquad$\lim \limits_{x \to 0}a^x=1$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.6.23(8)}\\
+
+$\because$\qquad$\lim \limits_{n \to \infty}\displaystyle\left(1+\frac{1}{n}\right)^{\frac{n^2}{n+1}}=\lim \limits_{n \to \infty}\left[\left(1+\frac{1}{n}\right)^n\right]^{\frac{n}{n+1}}$\\
+
+\qquad\quad and $\lim \limits_{n \to \infty}\displaystyle\frac{n}{n+1}=\lim \limits_{n \to \infty}\frac{1}{1+\frac{1}{n}}=\frac{1}{1+0}=1$\\
+
+\qquad\quad and $\lim \limits_{n \to \infty}\displaystyle\left(1+\frac{1}{n}\right)^n=e$\\
+
+$\therefore$\qquad$\lim \limits_{n \to \infty}\left(1+\frac{1}{n}\right)^{\frac{n^2}{n+1}}=e^1=e$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.7.2}\\
+
+$f(x)=(x-1)(x-2)(x-3)\cdot D(x)$\\
+
+when\\
+
+$$D(x)=
+\begin{cases}
+0& \text{$x\notin Q$}\\
+1& \text{$x\in Q$}
+\end{cases}$$
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.7.11(2)(5)}\\
+
+(2)\\
+
+we know that:$\lim \limits_{x \to 0}\log\left(\displaystyle\frac{ax+b}{cx+d}\right)=\log{\displaystyle\frac{b}{d}}$\\
+
+let's set this limit as L\\
+
+besides, $\lim \limits_{x \to 0}\frac{1}{x}=+\infty$\\
+
+so when $b>d$, $L>0\Rightarrow\lim \limits_{x \to 0}\displaystyle\frac{1}{x}\log\left(\displaystyle\frac{ax+b}{cx+d}\right)=+\infty*L=+\infty$\\
+
+when $b<d$, $L<0\Rightarrow\lim \limits_{x \to 0}\displaystyle\frac{1}{x}\log\left(\displaystyle\frac{ax+b}{cx+d}\right)=+\infty*L=-\infty$\\
+
+when$b=d$\\
+
+$\lim \limits_{x \to 0}\log\left(\displaystyle\frac{ax+b}{cx+d}\right)^{\displaystyle\frac{1}{x}}=\lim \limits_{x \to \infty}\log\left(1+\frac{a-c}{c+dx}\right)^x$\\
+
+set $\displaystyle\frac{1}{y}=\frac{a-c}{c+dx}$, then $x=\displaystyle\frac{(a-c)y-c}{d}$\\
+
+then  $\displaystyle\lim \limits_{x \to \infty}\log\left(1+\frac{a-c}{c+dx}\right)^x=\lim \limits_{y \to \infty}\log\left[\left(1+\frac{1}{y}\right)^y\right]^{\frac{(a-c)y-c}{dy}}=\lim \limits_{y \to \infty}\frac{(a-c)y-c}{dy}=\frac{a-c}{d}$\\
+
+(5)\\
+
+by composition rule, it is just the same as (2), only switch a with b, c with d.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1.7.13(2)}\\
+
+Let's set $y=a^x-1$, then $x=\log_a(y+1)$\\
+
+so, we can get: $\lim \limits_{y \to 0}\displaystyle\frac{y}{\log_a(y+1)}=\lim \limits_{y \to 0}\frac{y}{\frac{\log(y+1)}{\log a}}=\log a$\\
+
+\section{\textcolor[rgb]{0.70,0.00,0.00}{Part \uppercase\expandafter{\romannumeral2}}}(for TA)
+
+\vspace{3.5mm}
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#1}\\
+
+For sequences $\{x_n\}, \{y_n\}$ that $x_n=\displaystyle\frac{1}{2n\pi-\frac{\pi}{2}}, y_n=\displaystyle\frac{1}{2n\pi+\frac{\pi}{2}}$\\
+
+we can get both $\{x_n\}$ and $\{y_n\}$ converge to $0$\\
+
+but $f(x_n)=-1$, $f(y_n)=1$\\
+
+so $\{f(x_n)\}$ and $\{f(y_n)\}$ converge to different limits\\
+
+this means that:\\
+
+if we assume $\lim \limits_{x \to 0}f(x)$ exists, and it is $L$\\
+
+we choose $\epsilon=\displaystyle\frac{1}{2}$, than $\exists\delta$ s.t. $|x|<\delta\Rightarrow|f(x)-L|<\epsilon$\\
+
+when $n$ is sufficiently large, both $x_n$, and $y_n$ can be less than any $\delta$\\
+
+so $|f(x_n)-L|+|f(y_n)-L|<1$\\
+
+but $|f(x_n)-L|+|f(y_n)-L|>|f(x_n)-L-f(y_n)-L|=2$\\
+
+so, by contradiction, $\lim \limits_{x \to 0}f(x)$ doesn't exists.\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#2}\\
+
+In set $R$, for any interval $(\alpha,\beta)$ that $1<\alpha<\beta$, we can get a new interval $\displaystyle(\frac{\beta}{\alpha},\beta)$ that $1<\displaystyle\frac{\beta}{\alpha}<\beta$\\
+
+$\because$\qquad$\lim \limits_{n \to \infty}\displaystyle\frac{a_{n+1}}{a_n}=1$\\
+
+so we can choose $\epsilon=\displaystyle\frac{\beta}{\alpha}-1$, s.t. $\exists N_1$, $n>N_1\Rightarrow\left|\displaystyle\frac{a_{n+1}}{a_n}-1\right|<\epsilon$\\
+
+besides, $\{a_n\}$ is an strictly increasing sequence and $\lim \limits_{n \to \infty}a_n=+\infty$\\
+
+$\therefore$\qquad$1<\displaystyle\frac{a_{n+1}}{a_n}<\frac{\beta}{\alpha}$ and $\displaystyle\frac{a_n}{a_{n_0}}>\beta$ for sufficiently large
+$ n>N_2>n_0$\\
+
+so, for $n>N_2+N_1+1023^{1023}$, $\displaystyle\frac{a_{n+1}}{a_n}<1<\frac{\beta}{\alpha}<\beta<\frac{a_n}{a_{n_0}}$\\
+
+therefore there must be some numbers(we can them $x_n$) that can be written as $\displaystyle\frac{a_m}{a_n}$ in $(\displaystyle\frac{\beta}{\alpha},\beta)$, and there will also be other numbers(we call them $y_n$) that can't be written as $\displaystyle\frac{a_m}{a_n}$ in $(\displaystyle\frac{\beta}{\alpha},\beta)$\\
+
+$\therefore$\qquad$\lim \limits_{x \to c}f(x)=1$ when $c=x_n$, $\lim \limits_{x \to c}f(x)=0$ when $c=y_n$\\
+
+and $1\neq0$, so $\lim \limits_{x \to c}f(x)$ doesn't exists\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#3}\\
+
+(a)\\
+
+$\because$\qquad$f$ is a continuous function, so $\lim \limits_{x \to c}f(x)=f(c)$\\
+
+$\therefore$\qquad$\lim \limits_{x \to c}f(x)-x=f(c)-c$, so $f(x)-x$ is also a continuous function\\
+
+consider different situation for $f(0)-0$, and $f(1)-1$\\
+
+when $f(0)-0=0$ or $f(1)-1=0$, $1$ or $2$ can fulfill the requirment\\
+
+when $f(0)-0>0$ and $f(1)-1<0$, according to intermediate value theorem, there exists $x_0\in(0,1)$ s.t. $f(x_0)-x_0=0$\\
+
+$\therefore$\qquad there must be a $x_0$ s.t. $f(x_0)=x_0$\\
+
+(b)\\
+
+the same as (a), $g(x+1)-g(x)$ is also a continuous function\\
+
+consider different situation for $g(1)-g(0)$ and $g(2)-g(1)$\\
+
+when $g(1)-g(0)=0$, $g(2)-g(1)=0$ too\\
+
+so $0$ and $1$ can fulfill the requirement\\
+
+when $g(1)-g(0)<0$, $g(2)-g(1)>0$\\
+
+according to intermediate value theorem, so there must be a $x_0$ s.t. $g(x_0+1)-g(x_0)=0$\\
+
+when $g(1)-g(0)>0$, $g(2)-g(1)<0$\\
+
+according to intermediate value theorem, so there also must be a $x_0$ s.t. $g(x_0+1)-g(x_0)=0$\\
+
+$\therefore$\qquad there must be a $x_0$ s.t. $g(x_0+1)=g(x_0)$\\
+
+(c)\\
+
+we can prove this by contradiction\\
+
+if $h(x)$ is not a constant function\\
+
+there must be some $x_1$, $x_2$ s.t. $h(x_1)<h(x_2)$ and they are both irrational number\\
+
+but between any two irrational number, there must a rational number, we set a rational number $q$ s.t $h(x_1)<q<h(x_2)$\\
+
+so according to intermediate value theorem, we can know that there must exists a $x_1<x_3<x_2$ s.t $h(x_3)=q$\\
+
+but $h(x)$ is irrational for any $x\in R$\\
+
+so by contradiction, we can get $h(x)$ is a continuous function\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#4}\\
+
+(a)\\
+
+According to the question, we can know that:\\
+
+$\forall\epsilon>0, \exists\delta=\displaystyle\frac{1023}{1013}\epsilon$ s.t. $0<|x-a|<\delta\Rightarrow-\delta+a<x<\delta+a$\\
+
+$\therefore$\qquad$|f(x)-f(a)|<\displaystyle\frac{1013}{1023}|x-a|<\epsilon$\\
+
+$\therefore$\qquad$\lim \limits_{x \to a}f(x)=f(a)$\\
+
+$\therefore$\qquad$f(x)$ is continuous\\
+
+(b)\\
+
+$\because$\qquad$x_n=f(x-1)$\\
+
+$\therefore$\qquad$|x_2-x_1|<|x_1-x_0|\displaystyle\frac{1013}{1023}\Rightarrow|x_{n+k+1}-x_{n+k}|<\left(\frac{1013}{1023}\right)^k|x_{n+1}-x_n|$\\
+
+assume $0<n<m=n+k$\\
+
+then $\forall\epsilon>0, \exists N=\log_{\frac{1013}{1023}}\displaystyle\frac{\epsilon}{200|a_1-a_0|}$ s.t. $n>N\Rightarrow$ $\displaystyle
+|x_m-x_n|<\sum_{i=0}^{k-1}|a_{n+i+1}-a_{n+1}|<\sum_{i=0}^{k-1}\left(\displaystyle\frac{1013}{1023}\right)^i|a_{n+1}-a_n|=\frac{1\left(1-\frac{1013}{1023}\right)^{k-1}}{1-\frac{1013}{1023}}|a_{n+1}-a_n|<200|a_{n+1}-a_n|<200\left(\frac{1013}{1023}\right)^n|a_1-a_0|<\epsilon$\\
+
+so $x_n$ is a cauchy sequence\\
+
+and we can get: $0<x_n+1-x_n=f(x)-x_n<\displaystyle\frac{1013}{1023}|x_n-x_{n-1}|$\\
+
+by sandwich rule, we can get: $\lim \limits_{x \to }[f(x)-x]=f(L)-L=0$\\
+
+$\therefore$\qquad$f(L)=L$\\
+
+\textcolor[rgb]{0.00,0.00,0.50}{\#5}\\
+
+(a)\\
+
+if $f(x)$ is not a monotone sequence, there must be $x_1<x_2<x_3$ s.t. $f(x_1)>f(x_2),f(x_3)>f(x_2)$\\
+
+if $f(x_1)=f(x_3)$, then f(x)is not bijective\\
+
+if $f(x_1)>f(x_3)$, then according to intermediate theorem, we can find $x'$, s.t $f(x')=f(x_3)$ meanwhile $x_1<x'<x_2$, it is not bijective either\\
+
+if $f(x_1)<f(x_3)$, then according to intermediate theorem, we can find $x'$, s.t $f(x')=f(x_1)$ meanwhile $x_2<x'<x_3$, it is not bijective either\\
+
+by contradiction, we can get that $f(x)$ must be monotone\\
+
+besides, $f(0)<f(1)$, so $f(x)$ msut be monotone increasing\\
+
+if $f(x)$ is not strictly increasing, there must be some interval $(a,b)$ s.t. $f(a)=f(b)$\\
+
+but $f(x)$ is bijective\\
+
+so, by contradiction, we can get $f(x)$ is strictly increasing\\
+
+(b)\\
+
+$\because$\qquad$\{a_n\}$ is strictly increasing sequence, $f(x)$ is strictly increasing function\\
+
+$\therefore$\qquad$f(a_n)$ is strictly increasing, $f^{-1}(x)$ is strictly increasing too\\
+
+$\therefore$\qquad$\displaystyle\frac{\frac{1}{n+1}\sum_{k=1}^{n+1}f(a_k)}{\frac{1}{n}\sum_{k=1}^{n}f(a_n)}=\left(1+\frac{f(a_{n+1})}{f(a_1)+\cdots+f(a_n)}\right)\frac{n}{n+1}$\\
+
+besides, $f(a_{n+1})>f(a_n), f(a_1)+\cdots+f(a_n)<n\cdot f(a_n)$\\
+
+therefore, $\displaystyle\frac{\frac{1}{n+1}\sum_{k=1}^{n+1}f(a_k)}{\frac{1}{n}\sum_{k=1}^{n}f(a_n)}>1$\\
+
+therefore, $\frac{1}{n}\sum_{k=1}^{n}f(a_n)$ is strictly increasing\\
+
+therefore, $\left\{f^{-1}(\frac{1}{n}\sum_{k=1}^{n}f(a_n))\right\}_{n=1}^\infty$ is strictly increasing\\
+
+(c)\\
+
+because $b_n$ is bounded, this means:\\
+
+when it is bounded above\\
+
+assume that $U$ is upper bound of $b_n$\\
+
+it implies that, $b_n<U$ for any $n$\\
+
+and because $f(x)$ is strictly increasing, so $f(b_n)<f(U)$ for any $n$\\
+
+so, $\displaystyle\frac{1}{n}\sum_{k=1}^nf(b_k)<f(U)$\\
+
+so, $f^{-1}(\frac{1}{n}\sum_{k=1}^{n}f(a_n))<f^{-1}(f(U))$\\
+
+so, $\left\{f^{-1}(\frac{1}{n}\sum_{k=1}^{n}f(b_n))\right\}_{n=1}^\infty$ is bounded above\\
+
+when it is bounded below, it is just the same as bounded above\\
+
+so, $\left\{f^{-1}(\frac{1}{n}\sum_{k=1}^{n}f(b_n))\right\}_{n=1}^\infty$ is bounded\\ 
+
+
+
+\end{document}
